@@ -4,9 +4,50 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>my-portfolio</title>
+    <title>Tim Cheng Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
   </head>
-  <body>
-    <h1 class="text-3xl font-bold text-center mt-10">Hello, portfolio 👋</h1>
+  <body class="bg-black text-white font-['Inter']">
+
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 px-8 py-5 flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="#" aria-label="Tim Cheng home">
+        <img src="/assets/images/tim-cheng-logo.svg" alt="Tim Cheng" class="h-8 w-auto" />
+      </a>
+
+      <!-- Desktop nav links -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#projects" class="text-sm text-white/70 hover:text-white transition-colors duration-200">Projects</a>
+        <a href="#about"    class="text-sm text-white/70 hover:text-white transition-colors duration-200">About</a>
+        <a href="#contact"  class="text-sm border border-white/50 text-white px-5 py-2 rounded-full hover:bg-white hover:text-black transition-all duration-200">Contact</a>
+      </nav>
+
+      <!-- Mobile hamburger button -->
+      <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" class="md:hidden hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <!-- Mobile menu (full-screen overlay) -->
+    <div id="mobile-menu"
+      class="fixed inset-0 z-40 bg-black flex flex-col items-center justify-center gap-10">
+      <a href="#projects" class="text-2xl text-white/70 hover:text-white transition-colors">Projects</a>
+      <a href="#about"    class="text-2xl text-white/70 hover:text-white transition-colors">About</a>
+      <a href="#contact"  class="text-xl border border-white/50 text-white px-8 py-3 rounded-full hover:bg-white hover:text-black transition-all">Contact</a>
+    </div>
+
+    <!-- Placeholder content so the page has scroll -->
+    <main class="h-[200vh] flex items-center justify-center">
+      <p class="text-white/30 text-sm">Hero coming next</p>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
