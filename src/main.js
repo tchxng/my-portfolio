@@ -1,5 +1,44 @@
 import './style.css'
 
+// ── Hero: word-by-word entrance ──────────────────────────────────────────────
+// Split on <br> first to preserve the line break, then animate each word
+const heading = document.getElementById('hero-heading')
+let wordIndex = 0
+heading.innerHTML = heading.innerHTML
+  .split(/<br\s*\/?>/)
+  .map(line => {
+    const words = line.trim().split(/\s+/)
+    return words
+      .map(word => `<span class="hero-word" style="animation-delay:${(wordIndex++) * 0.07}s">${word}</span>`)
+      .join(' ')
+  })
+  .join('<br>')
+
+// ── Hero: scroll-driven effects ──────────────────────────────────────────────
+const heroVideo   = document.getElementById('hero-video')
+const heroContent = document.getElementById('hero-content')
+const heroSection = document.getElementById('hero')
+const decoSvgs = heroSection.querySelectorAll('.deco-svg')
+
+window.addEventListener('scroll', () => {
+  const heroHeight = heroSection.offsetHeight
+  // progress: 0 at top of hero, 1 when stats section has fully covered it
+  const progress = Math.min(window.scrollY / heroHeight, 1)
+
+  // Fade + blur the heading
+  heroContent.style.opacity = 1 - progress * 1.8
+  heroContent.style.filter  = `blur(${progress * 12}px)`
+
+  // Fade out satellite and saturn SVGs (slower than heading)
+  decoSvgs.forEach(svg => {
+    svg.style.opacity = Math.max(0, 1 - progress * 2.5)
+  })
+
+  // Speed up the starfield video as you scroll
+  if (heroVideo) heroVideo.playbackRate = 1 + progress * 5
+
+}, { passive: true })
+
 // Navbar: hide on scroll down, reveal with dark bg on scroll up
 const navbar = document.querySelector('header')
 let lastScrollY = 0

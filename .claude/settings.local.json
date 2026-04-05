@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"/c/Users/xtimo/Documents/2 Career/Portfolio Website/Assets/satellite.svg\" \"/c/Users/xtimo/Documents/6_Coding/my-portfolio/public/assets/images/\")",
+      "Bash(cp \"/c/Users/xtimo/Documents/2 Career/Portfolio Website/Assets/pisces-constellation.svg\" \"/c/Users/xtimo/Documents/6_Coding/my-portfolio/public/assets/images/\")",
+      "Bash(cp \"/c/Users/xtimo/Documents/2 Career/Portfolio Website/Assets/saturn-and-stars.svg\" \"/c/Users/xtimo/Documents/6_Coding/my-portfolio/public/assets/images/\")"
+    ]
+  }
+}

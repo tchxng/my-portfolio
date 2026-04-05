@@ -1,0 +1,34 @@
+<svg width="218" height="174" viewBox="0 0 218 174" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_2601_1107)">
+<path d="M82.1153 18.6298L65.3092 25.2171L72.2209 38.5891L49.5676 62.7218L29.3758 77.5764L6.63105 88.9553L31.0513 90.0104L81.8279 92.5276L97.4491 96.9563L140.001 110.315L161.123 118.023M161.123 118.023L173.574 115.907L185.985 125.375L189.772 134.988L177.63 142.229L162.361 138.528L153.338 127.977L161.123 118.023Z" stroke="#CAD6DD"/>
+<ellipse cx="66.1012" cy="25.0574" rx="1.91554" ry="1.48515" transform="rotate(26.3689 66.1012 25.0574)" fill="#CAD6DD"/>
+<ellipse cx="82.1153" cy="18.6301" rx="1.91554" ry="1.48515" transform="rotate(26.3689 82.1153 18.6301)" fill="#CAD6DD"/>
+<ellipse cx="72.0011" cy="39.033" rx="1.91554" ry="1.48515" transform="rotate(26.3689 72.0011 39.033)" fill="#CAD6DD"/>
+<ellipse cx="48.7757" cy="62.8821" rx="1.91554" ry="1.48515" transform="rotate(26.3689 48.7757 62.8821)" fill="#CAD6DD"/>
+<ellipse cx="28.364" cy="78.1799" rx="1.91554" ry="1.48515" transform="rotate(26.3689 28.364 78.1799)" fill="#CAD6DD"/>
+<ellipse cx="5.83908" cy="89.1155" rx="1.91554" ry="1.48515" transform="rotate(26.3689 5.83908 89.1155)" fill="#CAD6DD"/>
+<ellipse cx="81.2558" cy="92.2444" rx="1.91554" ry="1.48515" transform="rotate(26.3689 81.2558 92.2444)" fill="#CAD6DD"/>
+<ellipse cx="96.305" cy="96.3894" rx="1.91554" ry="1.48515" transform="rotate(26.3689 96.305 96.3894)" fill="#CAD6DD"/>
+<ellipse cx="24.2312" cy="89.3923" rx="1.91554" ry="1.48515" transform="rotate(26.3689 24.2312 89.3923)" fill="#CAD6DD"/>
+<ellipse cx="139.429" cy="110.032" rx="1.91554" ry="1.48515" transform="rotate(26.3689 139.429 110.032)" fill="#CAD6DD"/>
+<ellipse cx="160.903" cy="118.467" rx="1.91554" ry="1.48515" transform="rotate(26.3689 160.903 118.467)" fill="#CAD6DD"/>
+<ellipse cx="153.338" cy="127.977" rx="1.91554" ry="1.48515" transform="rotate(26.3689 153.338 127.977)" fill="#CAD6DD"/>
+<ellipse cx="162.581" cy="138.085" rx="1.91554" ry="1.48515" transform="rotate(26.3689 162.581 138.085)" fill="#CAD6DD"/>
+<ellipse cx="177.63" cy="142.23" rx="1.91554" ry="1.48515" transform="rotate(26.3689 177.63 142.23)" fill="#CAD6DD"/>
+<ellipse cx="189.772" cy="134.988" rx="1.91554" ry="1.48515" transform="rotate(26.3689 189.772 134.988)" fill="#CAD6DD"/>
+<ellipse cx="185.985" cy="125.375" rx="1.91554" ry="1.48515" transform="rotate(26.3689 185.985 125.375)" fill="#CAD6DD"/>
+<ellipse cx="173.574" cy="115.907" rx="1.91554" ry="1.48515" transform="rotate(26.3689 173.574 115.907)" fill="#CAD6DD"/>
+</g>
+<defs>
+<filter id="filter0_d_2601_1107" x="0" y="17.0508" width="195.611" height="134.758" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2601_1107"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2601_1107" result="shape"/>
+</filter>
+</defs>
+</svg>
