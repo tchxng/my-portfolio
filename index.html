@@ -62,7 +62,7 @@
 
       <!-- Saturn: middle right, large -->
       <img src="/assets/images/saturn-and-stars.svg" alt="" aria-hidden="true"
-        class="deco-svg absolute top-1/3 md:top-1/2 -translate-y-1/2 right-10 w-44 md:w-64 opacity-70 z-2" />
+        class="deco-svg absolute top-1/3 md:top-1/2 lg:top-1/3 -translate-y-1/2 right-10 lg:right-20 w-44 md:w-64 opacity-70 z-2" />
 
       <!-- Heading: truly centered vertically, left-aligned -->
       <div id="hero-content" class="absolute inset-0 z-3 flex items-center px-10 lg:px-20">
@@ -86,20 +86,35 @@
         class="absolute top-0 left-0 w-full z-5" style="transform: translateY(-99%)" />
 
       <!-- Stats content -->
-      <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-12 sm:gap-20 text-center">
-        <div>
-          <span class="block font-['IBM_Plex_Mono'] text-4xl font-bold text-zinc-900">2</span>
-          <span class="block text-xs text-zinc-500 tracking-widest uppercase mt-1">Engineering Degrees</span>
+      <div class="max-w-6xl mx-auto px-8 lg:px-16 pt-16 pb-20">
+
+        <!-- Header row: fades up on scroll into view -->
+        <div id="stats-header" class="stats-fade-up flex flex-col md:flex-row md:justify-between gap-6 mb-16">
+          <p class="font-['IBM_Plex_Mono'] text-sm tracking-[0.2em] text-zinc-800">[ AT A GLANCE ]</p>
+          <p class="text-zinc-700 text-base max-w-md md:text-right leading-relaxed">I design websites and applications that turn complex information into clear, usable experiences.</p>
         </div>
-        <div class="hidden sm:block w-px h-12 bg-zinc-300"></div>
-        <div>
-          <span class="block font-['IBM_Plex_Mono'] text-4xl font-bold text-zinc-900">10</span>
-          <span class="block text-xs text-zinc-500 tracking-widest uppercase mt-1">Years Experience</span>
-        </div>
-        <div class="hidden sm:block w-px h-12 bg-zinc-300"></div>
-        <div>
-          <span class="block font-['IBM_Plex_Mono'] text-4xl font-bold text-zinc-900">13+</span>
-          <span class="block text-xs text-zinc-500 tracking-widest uppercase mt-1">Website Projects</span>
+
+        <!-- Three stats: slide in from right one at a time -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-16 lg:gap-24">
+
+          <div class="stat-card" data-target="2" data-suffix="">
+            <span class="stat-number block text-6xl font-light text-zinc-900 leading-none">0</span>
+            <p class="font-medium text-zinc-900 mt-4 mb-2">Engineering Degrees</p>
+            <p class="text-zinc-500 text-sm leading-relaxed">In Aerospace (B.S.) and Systems Engineering (M.S.)</p>
+          </div>
+
+          <div class="stat-card" data-target="10" data-suffix="">
+            <span class="stat-number block text-6xl font-light text-zinc-900 leading-none">0</span>
+            <p class="font-medium text-zinc-900 mt-4 mb-2">Years of Experience</p>
+            <p class="text-zinc-500 text-sm leading-relaxed">Working in the defense and intelligence sector</p>
+          </div>
+
+          <div class="stat-card" data-target="15" data-suffix="+">
+            <span class="stat-number block text-6xl font-light text-zinc-900 leading-none">0</span>
+            <p class="font-medium text-zinc-900 mt-4 mb-2">Website Projects</p>
+            <p class="text-zinc-500 text-sm leading-relaxed">Designed and built in the last 12 months</p>
+          </div>
+
         </div>
       </div>
 

@@ -31,7 +31,7 @@ window.addEventListener('scroll', () => {
 
   // Fade out satellite and saturn SVGs (slower than heading)
   decoSvgs.forEach(svg => {
-    svg.style.opacity = Math.max(0, 1 - progress * 2.5)
+    svg.style.opacity = Math.max(0, 1 - progress * 1.2)
   })
 
   // Speed up the starfield video as you scroll
@@ -80,6 +80,47 @@ toggle.addEventListener('click', () => {
     lines[2].style.transform = ''
   }
 })
+
+// ── Stats section: scroll-triggered animations ───────────────────────────────
+function countUp(el, target, suffix, duration = 1800) {
+  const start = performance.now()
+  const update = (now) => {
+    const elapsed = now - start
+    const progress = Math.min(elapsed / duration, 1)
+    // ease out cubic
+    const eased = 1 - Math.pow(1 - progress, 3)
+    el.textContent = Math.round(eased * target) + suffix
+    if (progress < 1) requestAnimationFrame(update)
+  }
+  requestAnimationFrame(update)
+}
+
+const statsHeader = document.getElementById('stats-header')
+const statCards = document.querySelectorAll('.stat-card')
+let statsAnimated = false
+
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting || statsAnimated) return
+    statsAnimated = true
+
+    // Fade up the header
+    statsHeader.classList.add('is-visible')
+
+    // Slide in each stat card with stagger, then count up
+    statCards.forEach((card, i) => {
+      setTimeout(() => {
+        card.classList.add('is-visible')
+        const numEl = card.querySelector('.stat-number')
+        const target = parseInt(card.dataset.target)
+        const suffix = card.dataset.suffix || ''
+        countUp(numEl, target, suffix)
+      }, 300 + i * 250)
+    })
+  })
+}, { threshold: 0.2 })
+
+statsObserver.observe(document.getElementById('stats'))
 
 // Close mobile menu when a link is clicked
 menu.querySelectorAll('a').forEach(link => {
