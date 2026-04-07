@@ -86,12 +86,12 @@
         class="absolute top-0 left-0 w-full z-5" style="transform: translateY(-99%)" />
 
       <!-- Stats content -->
-      <div class="max-w-6xl mx-auto px-8 lg:px-16 pt-16 pb-20">
+      <div class="max-w-7xl mx-auto px-8 lg:px-16 pt-16 pb-20">
 
         <!-- Header row: fades up on scroll into view -->
         <div id="stats-header" class="stats-fade-up flex flex-col md:flex-row md:justify-between gap-6 mb-16">
           <p class="font-['IBM_Plex_Mono'] text-sm tracking-[0.2em] text-zinc-800">[ AT A GLANCE ]</p>
-          <p class="text-zinc-700 text-base max-w-md md:text-right leading-relaxed">I design websites and applications that turn complex information into clear, usable experiences.</p>
+          <p class="text-zinc-700 text-base max-w-md md:text-right leading-relaxed">I design websites and applications that turn complex information into clear and usable experiences.</p>
         </div>
 
         <!-- Three stats: slide in from right one at a time -->
@@ -120,9 +120,61 @@
 
     </section>
 
+    <!-- PROJECTS -->
+    <section id="projects" class="relative z-10 py-24 px-8" style="background-color: #0e0e10;">
+
+      <div class="max-w-7xl mx-auto px-8 lg:px-16">
+
+        <!-- Header row -->
+        <div id="projects-header" class="stats-fade-up flex flex-col md:flex-row md:justify-between gap-6 mb-16">
+          <p class="font-['IBM_Plex_Mono'] text-sm tracking-[0.2em] text-zinc-400">[ SELECTED PROJECTS ]</p>
+          <p class="text-zinc-400 text-base max-w-sm md:text-right leading-relaxed">A collection of UI/UX case studies that highlight how I think and design.</p>
+        </div>
+
+        <!-- Project cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-3">
+
+          <a href="#" class="project-card group block">
+            <div class="project-img-wrap overflow-hidden aspect-3/4 mb-4 relative">
+              <img src="/assets/images/costcupid-hero.webp" alt="CostCupid"
+                class="project-img-default absolute inset-0 w-full h-full object-cover object-top-left scale-110 transition-opacity duration-500" />
+              <img src="/assets/images/costcupid-style-guide.webp" alt=""
+                class="project-img-hover absolute inset-0 w-full h-full object-cover object-top-left" />
+            </div>
+            <h3 class="text-white font-normal text-lg mb-1">CostCupid</h3>
+            <p class="text-zinc-400 text-sm leading-relaxed pr-4">A fun and interactive wedding budgeting tool with easy-to-use dashboard.</p>
+          </a>
+
+          <a href="#" class="project-card group block">
+            <div class="project-img-wrap overflow-hidden aspect-3/4 mb-4 relative">
+              <img src="/assets/images/dn-homepage.webp" alt="The Diverse Narrative"
+                class="project-img-default absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-500" />
+              <img src="/assets/images/dn-mobile.webp" alt=""
+                class="project-img-hover absolute inset-0 w-full h-full object-cover object-top-left" />
+            </div>
+            <h3 class="text-white font-normal text-lg mb-1">The Diverse Narrative</h3>
+            <p class="text-zinc-400 text-sm leading-relaxed pr-4">An inclusive platform that amplifies the stories of underrepresented groups in society.</p>
+          </a>
+
+          <a href="#" class="project-card group block">
+            <div class="project-img-wrap overflow-hidden aspect-3/4 mb-4 relative">
+              <img src="/assets/images/tcps-landing-pages.webp" alt="Tim Cheng Music"
+                class="project-img-default absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-500" />
+              <img src="/assets/images/tcps-tablet.webp" alt=""
+                class="project-img-hover absolute inset-0 w-full h-full object-cover object-left-top" />
+            </div>
+            <h3 class="text-white font-normal text-lg mb-1">Tim Cheng Music</h3>
+            <p class="text-zinc-400 text-sm leading-relaxed pr-4">A landing page to inform prospective students about my piano studio.</p>
+          </a>
+
+        </div>
+      </div>
+
+    </section>
+
     <!-- Remaining page content placeholder -->
-    <div class="relative z-10 bg-zinc-100 h-screen flex items-center justify-center">
-      <p class="text-zinc-400 text-sm font-['IBM_Plex_Mono']">more sections coming</p>
+    <div class="relative z-10 bg-zinc-950 h-screen flex items-center justify-center">
+      <p class="text-zinc-600 text-sm font-['IBM_Plex_Mono']">more sections coming</p>
     </div>
 
     <script type="module" src="/src/main.js"></script>

@@ -122,6 +122,49 @@ const statsObserver = new IntersectionObserver((entries) => {
 
 statsObserver.observe(document.getElementById('stats'))
 
+// ── Projects section: fade-up header + project cards ─────────────────────────
+const projectsHeader = document.getElementById('projects-header')
+const projectCards = document.querySelectorAll('.project-card')
+let projectsAnimated = false
+
+const projectsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting || projectsAnimated) return
+    projectsAnimated = true
+
+    projectsHeader.classList.add('is-visible')
+
+    projectCards.forEach((card, i) => {
+      setTimeout(() => {
+        card.classList.add('is-visible')
+      }, 300 + i * 200)
+    })
+  })
+}, { threshold: 0.15 })
+
+projectsObserver.observe(document.getElementById('projects'))
+
+// ── Project card hover: pan+zoom with flicker-free hover-off ─────────────────
+document.querySelectorAll('.project-card').forEach(card => {
+  const hoverImg = card.querySelector('.project-img-hover')
+
+  card.addEventListener('mouseenter', () => {
+    // Clear any frozen transform from previous hover-off
+    hoverImg.style.transform = ''
+    hoverImg.classList.add('is-panning')
+  })
+
+  card.addEventListener('mouseleave', () => {
+    // Freeze current transform so image holds position while fading out
+    hoverImg.style.transform = getComputedStyle(hoverImg).transform
+    hoverImg.classList.remove('is-panning')
+    // Clean up inline style after fade completes
+    hoverImg.addEventListener('transitionend', () => {
+      hoverImg.style.transform = ''
+    }, { once: true })
+  })
+})
+
 // Close mobile menu when a link is clicked
 menu.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => toggle.click())
