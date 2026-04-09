@@ -144,6 +144,28 @@ const projectsObserver = new IntersectionObserver((entries) => {
 
 projectsObserver.observe(document.getElementById('projects'))
 
+// ── About section ─────────────────────────────────────────────────────────────
+const expCards = document.querySelectorAll('.exp-card')
+let aboutAnimated = false
+
+const aboutObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting || aboutAnimated) return
+    aboutAnimated = true
+
+    // Photo fades first, then text+buttons together
+    setTimeout(() => document.getElementById('about-photo').classList.add('is-visible'), 0)
+    setTimeout(() => document.getElementById('about-text').classList.add('is-visible'), 220)
+
+    // Cards stagger after
+    expCards.forEach((card, i) => {
+      setTimeout(() => card.classList.add('is-visible'), 400 + i * 180)
+    })
+  })
+}, { threshold: 0.1 })
+
+aboutObserver.observe(document.getElementById('about'))
+
 // ── Project card hover: pan+zoom with flicker-free hover-off ─────────────────
 document.querySelectorAll('.project-card').forEach(card => {
   const hoverImg = card.querySelector('.project-img-hover')

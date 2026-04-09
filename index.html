@@ -54,7 +54,7 @@
       </video>
 
       <!-- Gradient overlay: dark at top, transparent at bottom so astronaut stays bright -->
-      <div class="absolute inset-0 z-[1]" style="background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%)"></div>
+      <div class="absolute inset-0 z-1" style="background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%)"></div>
 
       <!-- Satellite: upper left, large -->
       <img src="/assets/images/satellite.svg" alt="" aria-hidden="true"
@@ -67,7 +67,7 @@
       <!-- Heading: truly centered vertically, left-aligned -->
       <div id="hero-content" class="absolute inset-0 z-3 flex items-center px-10 lg:px-20">
         <h1 id="hero-heading" class="font-light text-4xl sm:text-5xl lg:text-6xl leading-tight text-white lg:max-w-175">
-          Hi, I'm Tim, a<br> UI Designer &amp; Developer.
+          Hi, I'm Tim, a UI/UX<br> Designer &amp; Developer.
         </h1>
       </div>
 
@@ -161,7 +161,7 @@
               <img src="/assets/images/tcps-landing-pages.webp" alt="Tim Cheng Music"
                 class="project-img-default absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-500" />
               <img src="/assets/images/tcps-tablet.webp" alt=""
-                class="project-img-hover absolute inset-0 w-full h-full object-cover object-left-top" />
+                class="project-img-hover absolute inset-0 w-full h-full object-cover object-top-left" />
             </div>
             <h3 class="text-white font-normal text-lg mb-1">Tim Cheng Music</h3>
             <p class="text-zinc-400 text-sm leading-relaxed pr-4">A landing page to inform prospective students about my piano studio.</p>
@@ -172,9 +172,76 @@
 
     </section>
 
+    <!-- ABOUT -->
+    <section id="about" class="relative z-10 py-24 px-8" style="background-color: #f0f1f2;">
+      <div class="max-w-7xl mx-auto px-8 lg:px-16">
+
+        <!-- Section label -->
+        <p class="font-['IBM_Plex_Mono'] text-sm tracking-[0.2em] text-zinc-800 mb-16">[ ABOUT ]</p>
+
+        <!-- Two-column: 3/5 left, 2/5 right -->
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-16 lg:gap-24">
+
+          <!-- LEFT col (3/5) -->
+          <div class="lg:col-span-3 flex flex-col gap-8">
+
+            <div id="about-photo" class="stats-fade-up overflow-hidden aspect-square w-full max-w-sm">
+              <img src="/assets/images/tim-profile.webp" alt="Tim Cheng"
+                class="w-full h-full object-cover object-center" />
+            </div>
+
+            <div id="about-text" class="stats-fade-up flex flex-col gap-4">
+              <p class="text-zinc-700 text-sm leading-relaxed">I'm a UI/UX designer and developer based in Northern Virginia. My work integrates a background in Aerospace and Systems Engineering combined with 10 years in the defense and intelligence sector. I enjoy the creative side of design as well as the technical aspects of coding.</p>
+              <p class="text-zinc-700 text-sm leading-relaxed">I'm driven to create beautiful designs that deliver information in the most impactful way. When I'm not building websites, I love working out, playing piano, and exploring local restaurants.</p>
+
+              <div class="flex flex-wrap gap-4 mt-2">
+                <a href="#" class="bg-zinc-900 text-white text-sm px-6 py-3 rounded-full hover:bg-zinc-700 transition-colors duration-200">View LinkedIn Profile</a>
+                <!-- Desktop only: Download Resume sits next to LinkedIn -->
+                <a href="#" class="hidden lg:inline-block border border-zinc-400 text-zinc-800 text-sm px-6 py-3 rounded-full hover:bg-zinc-900 hover:text-white hover:border-zinc-900 transition-all duration-200">Download Resume</a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT col (2/5): cards fade up on scroll -->
+          <div id="about-timeline" class="lg:col-span-2 flex flex-col gap-4">
+
+            <div class="exp-card bg-white p-6 shadow-sm">
+              <h3 class="text-zinc-900 text-base font-normal mb-1">Web Designer/UI Developer</h3>
+              <p class="text-zinc-400 text-xs mb-3">CACI International | Aug 2023 – Present</p>
+              <p class="text-zinc-600 text-xs leading-relaxed">Designing and developing custom websites for directorates and offices within my government agency.</p>
+            </div>
+
+            <div class="exp-card bg-white p-6 shadow-sm">
+              <h3 class="text-zinc-900 text-base font-normal mb-1">Software Developer</h3>
+              <p class="text-zinc-400 text-xs mb-3">Verite Group | Aug 2022 – Apr 2023</p>
+              <p class="text-zinc-600 text-xs leading-relaxed">Conducted UX research and built internal data tools.</p>
+            </div>
+
+            <div class="exp-card bg-white p-6 shadow-sm">
+              <h3 class="text-zinc-900 text-base font-normal mb-1">Sr. Software Engineer</h3>
+              <p class="text-zinc-400 text-xs mb-3">Raytheon Technologies | Jun 2019 – Aug 2022</p>
+              <p class="text-zinc-600 text-xs leading-relaxed">Developed and maintained 50+ tools, scripts, and webpages utilized by vehicle engineers.</p>
+            </div>
+
+            <div class="exp-card bg-white p-6 shadow-sm">
+              <h3 class="text-zinc-900 text-base font-normal mb-1">Systems Engineer II</h3>
+              <p class="text-zinc-400 text-xs mb-3">Peraton | Oct 2015 – May 2019</p>
+              <p class="text-zinc-600 text-xs leading-relaxed">Developed algorithms, built tools, and led system-level testing.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Mobile only: Download Resume appears below the cards -->
+        <a href="#" class="lg:hidden inline-block mt-8 border border-zinc-400 text-zinc-800 text-sm px-6 py-3 rounded-full hover:bg-zinc-900 hover:text-white hover:border-zinc-900 transition-all duration-200">Download Resume</a>
+
+      </div>
+    </section>
+
     <!-- Remaining page content placeholder -->
-    <div class="relative z-10 bg-zinc-950 h-screen flex items-center justify-center">
-      <p class="text-zinc-600 text-sm font-['IBM_Plex_Mono']">more sections coming</p>
+    <div class="relative z-10 bg-zinc-100 h-screen flex items-center justify-center">
+      <p class="text-zinc-400 text-sm font-['IBM_Plex_Mono']">more sections coming</p>
     </div>
 
     <script type="module" src="/src/main.js"></script>

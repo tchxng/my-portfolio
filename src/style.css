@@ -151,6 +151,18 @@
   opacity: 1;
 }
 
+/* Experience cards: fade up on scroll */
+.exp-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.exp-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Navbar scroll behavior */
 header {
   transition: transform 0.35s ease, background-color 0.35s ease, backdrop-filter 0.35s ease;
