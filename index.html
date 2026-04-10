@@ -177,7 +177,7 @@
       <div class="max-w-7xl mx-auto px-8 lg:px-16">
 
         <!-- Section label -->
-        <p class="font-['IBM_Plex_Mono'] text-sm tracking-[0.2em] text-zinc-800 mb-16">[ ABOUT ]</p>
+        <p id="about-header" class="stats-fade-up font-['IBM_Plex_Mono'] text-sm tracking-[0.2em] text-zinc-800 mb-16">[ ABOUT ]</p>
 
         <!-- Two-column: 3/5 left, 2/5 right -->
         <div class="grid grid-cols-1 lg:grid-cols-5 gap-16 lg:gap-24">
@@ -239,9 +239,112 @@
       </div>
     </section>
 
+    <!-- MORE DESIGN WORK -->
+    <section id="gallery" class="relative z-10 py-24 px-8" style="background-color: #0e0e10;">
+      <div class="max-w-7xl mx-auto px-8 lg:px-16">
+
+        <!-- Header row -->
+        <div id="gallery-header" class="stats-fade-up flex flex-col md:flex-row md:justify-between gap-6 mb-16">
+          <p class="font-['IBM_Plex_Mono'] text-sm tracking-[0.2em] text-zinc-400">[ EXPLORATIONS ]</p>
+          <p class="text-zinc-400 text-base max-w-sm md:text-right leading-relaxed">A selection of website and poster designs. <br>Click each image to enlarge.</p>
+        </div>
+
+        <!-- Grid: 2 cols mobile → 3 → 4 → 5 -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+
+          <div class="gallery-item cursor-pointer" data-index="0">
+            <div class="aspect-9/16 overflow-hidden">
+              <img src="/assets/images/additional-work/CrownBoutique.webp" alt="Crown Boutique" class="gallery-img w-full h-full object-cover object-top" />
+            </div>
+          </div>
+
+          <div class="gallery-item cursor-pointer" data-index="1">
+            <div class="aspect-9/16 overflow-hidden">
+              <img src="/assets/images/additional-work/Kizuna.webp" alt="Kizuna" class="gallery-img w-full h-full object-cover object-top" />
+            </div>
+          </div>
+
+          <div class="gallery-item cursor-pointer" data-index="2">
+            <div class="aspect-9/16 overflow-hidden">
+              <img src="/assets/images/additional-work/LoveNest.webp" alt="Love Nest" class="gallery-img w-full h-full object-cover object-top" />
+            </div>
+          </div>
+
+          <div class="gallery-item cursor-pointer" data-index="3">
+            <div class="aspect-9/16 overflow-hidden">
+              <img src="/assets/images/additional-work/Neighborly.webp" alt="Neighborly" class="gallery-img w-full h-full object-cover object-top" />
+            </div>
+          </div>
+
+          <div class="gallery-item cursor-pointer" data-index="4">
+            <div class="aspect-9/16 overflow-hidden nextwave-crop">
+              <img src="/assets/images/additional-work/NextWave.webp" alt="Next Wave" class="gallery-img w-full h-full object-cover object-top" />
+            </div>
+          </div>
+
+          <div class="gallery-item cursor-pointer" data-index="5">
+            <div class="aspect-9/16 overflow-hidden">
+              <img src="/assets/images/additional-work/boxing-academy.webp" alt="Boxing Academy" class="gallery-img w-full h-full object-cover object-top" />
+            </div>
+          </div>
+
+          <div class="gallery-item cursor-pointer" data-index="6">
+            <div class="aspect-9/16 overflow-hidden">
+              <img src="/assets/images/additional-work/climbing-smith-rock.webp" alt="Climbing Smith Rock" class="gallery-img w-full h-full object-cover object-top" />
+            </div>
+          </div>
+
+          <div class="gallery-item cursor-pointer" data-index="7">
+            <div class="aspect-9/16 overflow-hidden">
+              <img src="/assets/images/additional-work/grit-woman-running.webp" alt="Grit" class="gallery-img w-full h-full object-cover object-top" />
+            </div>
+          </div>
+
+          <div class="gallery-item cursor-pointer" data-index="8">
+            <div class="aspect-9/16 overflow-hidden">
+              <img src="/assets/images/additional-work/northside-regatta.webp" alt="Northside Regatta" class="gallery-img w-full h-full object-cover object-top" />
+            </div>
+          </div>
+
+          <div class="gallery-item cursor-pointer" data-index="9">
+            <div class="aspect-9/16 overflow-hidden">
+              <img src="/assets/images/additional-work/rise-basketball.webp" alt="Rise Basketball" class="gallery-img w-full h-full object-cover object-top" />
+            </div>
+          </div>
+
+          <div class="gallery-item cursor-pointer" data-index="10">
+            <div class="aspect-9/16 overflow-hidden">
+              <img src="/assets/images/additional-work/ski-jumper.webp" alt="Ski Jumper" class="gallery-img w-full h-full object-cover object-top" />
+            </div>
+          </div>
+
+          <div class="gallery-item cursor-pointer" data-index="11">
+            <div class="aspect-9/16 overflow-hidden">
+              <img src="/assets/images/additional-work/strike-fast-soccer.webp" alt="Strike Fast Soccer" class="gallery-img w-full h-full object-cover object-top" />
+            </div>
+          </div>
+
+          <div class="gallery-item cursor-pointer" data-index="12">
+            <div class="aspect-9/16 overflow-hidden">
+              <img src="/assets/images/additional-work/turbo-drive-racecar.webp" alt="Turbo Drive" class="gallery-img w-full h-full object-cover object-top" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="fixed inset-0 z-100 bg-black/90 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+      <button id="lightbox-close" class="absolute top-6 right-8 text-white/60 hover:text-white text-3xl leading-none z-10">&times;</button>
+      <button id="lightbox-prev" class="absolute left-6 text-white/60 hover:text-white text-3xl px-2 z-10">&#8592;</button>
+      <button id="lightbox-next" class="absolute right-6 text-white/60 hover:text-white text-3xl px-2 z-10">&#8594;</button>
+      <img id="lightbox-img" src="" alt="" class="object-contain cursor-zoom-in select-none" />
+    </div>
+
     <!-- Remaining page content placeholder -->
-    <div class="relative z-10 bg-zinc-100 h-screen flex items-center justify-center">
-      <p class="text-zinc-400 text-sm font-['IBM_Plex_Mono']">more sections coming</p>
+    <div class="relative z-10 bg-zinc-950 h-screen flex items-center justify-center">
+      <p class="text-zinc-600 text-sm font-['IBM_Plex_Mono']">more sections coming</p>
     </div>
 
     <script type="module" src="/src/main.js"></script>

@@ -153,6 +153,9 @@ const aboutObserver = new IntersectionObserver((entries) => {
     if (!entry.isIntersecting || aboutAnimated) return
     aboutAnimated = true
 
+    // Header fades up first
+    document.getElementById('about-header').classList.add('is-visible')
+
     // Photo fades first, then text+buttons together
     setTimeout(() => document.getElementById('about-photo').classList.add('is-visible'), 0)
     setTimeout(() => document.getElementById('about-text').classList.add('is-visible'), 220)
@@ -185,6 +188,143 @@ document.querySelectorAll('.project-card').forEach(card => {
       hoverImg.style.transform = ''
     }, { once: true })
   })
+})
+
+// ── Gallery: fade-up header + staggered image reveal ─────────────────────────
+const galleryHeader   = document.getElementById('gallery-header')
+const galleryImgItems = document.querySelectorAll('.gallery-item')
+let galleryHeaderShown = false
+
+const galleryObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting || galleryHeaderShown) return
+    galleryHeaderShown = true
+    galleryHeader.classList.add('is-visible')
+    galleryImgItems.forEach((item, i) => {
+      setTimeout(() => item.classList.add('is-visible'), 300 + i * 80)
+    })
+  })
+}, { threshold: 0.15 })
+
+galleryObserver.observe(document.getElementById('gallery'))
+
+// ── Gallery hover: smooth pan+zoom with fade-back on mouse leave ──────────────
+galleryImgItems.forEach(item => {
+  const img = item.querySelector('.gallery-img')
+
+  item.addEventListener('mouseenter', () => {
+    img.classList.remove('is-resetting')
+    img.classList.add('is-panning')
+  })
+
+  item.addEventListener('mouseleave', () => {
+    img.classList.remove('is-panning')
+    img.classList.add('is-resetting')
+    img.addEventListener('transitionend', () => {
+      img.classList.remove('is-resetting')
+    }, { once: true })
+  })
+})
+
+// ── Lightbox ──────────────────────────────────────────────────────────────────
+const lightbox      = document.getElementById('lightbox')
+const lightboxImg   = document.getElementById('lightbox-img')
+const lightboxClose = document.getElementById('lightbox-close')
+const lightboxPrev  = document.getElementById('lightbox-prev')
+const lightboxNext  = document.getElementById('lightbox-next')
+const galleryItems  = [...document.querySelectorAll('.gallery-item')]
+let currentIndex    = 0
+let isZoomed        = false
+let dragState       = { active: false, startY: 0, transY: 0, didDrag: false }
+const ZOOM_SCALE    = 3.5
+
+function clampTransY(transY) {
+  if (!isZoomed) return 0
+  // How much extra height the scaled image has vs viewport
+  const imgH      = lightboxImg.offsetHeight
+  const viewH     = window.innerHeight
+  const scaledH   = imgH * ZOOM_SCALE
+  const maxShift  = Math.max(0, (scaledH - viewH) / 2 / ZOOM_SCALE)
+  return Math.max(-maxShift, Math.min(maxShift, transY))
+}
+
+function applyTransform() {
+  lightboxImg.style.transform = isZoomed
+    ? `scale(${ZOOM_SCALE}) translateY(${dragState.transY}px)`
+    : 'scale(1) translateY(0)'
+}
+
+function resetTransform() {
+  isZoomed = false
+  dragState.transY = 0
+  applyTransform()
+  lightboxImg.classList.remove('is-zoomed', 'is-dragging')
+}
+
+function openLightbox(index) {
+  currentIndex = index
+  const img = galleryItems[index].querySelector('img')
+  lightboxImg.src = img.src
+  lightboxImg.alt = img.alt
+  resetTransform()
+  lightbox.classList.remove('opacity-0', 'pointer-events-none')
+  document.body.style.overflow = 'hidden'
+}
+
+function closeLightbox() {
+  lightbox.classList.add('opacity-0', 'pointer-events-none')
+  document.body.style.overflow = ''
+  resetTransform()
+}
+
+function showPrev() { openLightbox((currentIndex - 1 + galleryItems.length) % galleryItems.length) }
+function showNext() { openLightbox((currentIndex + 1) % galleryItems.length) }
+
+// Click to zoom/unzoom
+lightboxImg.addEventListener('click', e => {
+  if (dragState.didDrag) return
+  e.stopPropagation()
+  isZoomed = !isZoomed
+  dragState.transY = 0
+  applyTransform()
+  lightboxImg.classList.toggle('is-zoomed', isZoomed)
+})
+
+// Vertical-only drag when zoomed
+lightboxImg.addEventListener('pointerdown', e => {
+  if (!isZoomed) return
+  e.preventDefault()
+  dragState.active  = true
+  dragState.didDrag = false
+  dragState.startY  = e.clientY - dragState.transY * ZOOM_SCALE
+  lightboxImg.classList.add('is-dragging')
+  lightboxImg.setPointerCapture(e.pointerId)
+})
+
+lightboxImg.addEventListener('pointermove', e => {
+  if (!dragState.active) return
+  dragState.didDrag = true
+  const rawTransY = (e.clientY - dragState.startY) / ZOOM_SCALE
+  dragState.transY = clampTransY(rawTransY)
+  applyTransform()
+})
+
+lightboxImg.addEventListener('pointerup', () => {
+  dragState.active = false
+  lightboxImg.classList.remove('is-dragging')
+  setTimeout(() => { dragState.didDrag = false }, 0)
+})
+
+galleryItems.forEach((item, i) => item.addEventListener('click', () => openLightbox(i)))
+lightboxClose.addEventListener('click', closeLightbox)
+lightboxPrev.addEventListener('click', showPrev)
+lightboxNext.addEventListener('click', showNext)
+lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox() })
+document.addEventListener('keydown', e => {
+  if (lightbox.classList.contains('opacity-0')) return
+  if (e.key === 'Escape') closeLightbox()
+  if (e.key === 'ArrowLeft') showPrev()
+  if (e.key === 'ArrowRight') showNext()
 })
 
 // Close mobile menu when a link is clicked

@@ -151,6 +151,42 @@
   opacity: 1;
 }
 
+/* Gallery grid hover: CSS transition-driven, responsive in both directions */
+.gallery-img {
+  transform-origin: left center;
+  transform: scale(1) translateX(0%);
+  transition: transform 1.8s ease-out;
+}
+
+.gallery-img.is-panning {
+  transform: scale(1.12) translateX(-8%);
+  transition: transform 1.8s ease-out;
+}
+
+.gallery-img.is-resetting {
+  transition: transform 0.55s ease-in;
+}
+
+/* NextWave: slight zoom to hide white border on grid view */
+.nextwave-crop .gallery-img {
+  transform: scale(1.02) translateX(-1%);
+}
+.nextwave-crop .gallery-img.is-panning {
+  transform: scale(1.13) translateX(-8%);
+}
+
+/* Gallery items: fade in staggered on scroll into view */
+.gallery-item {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.gallery-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Experience cards: fade up on scroll */
 .exp-card {
   opacity: 0;
@@ -161,6 +197,30 @@
 .exp-card.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Lightbox image sizing */
+#lightbox-img {
+  width: 95vw;
+  max-height: 90vh;
+  object-fit: contain;
+  cursor: zoom-in;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+#lightbox-img.is-zoomed {
+  cursor: grab;
+}
+
+#lightbox-img.is-dragging {
+  cursor: grabbing;
+}
+
+@media (min-width: 1024px) {
+  #lightbox-img {
+    width: 50vw;
+  }
 }
 
 /* Navbar scroll behavior */
