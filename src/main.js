@@ -1,5 +1,21 @@
 import './style.css'
 
+// ── Footer: scale "Tim Cheng" to fill viewport width ─────────────────────────
+const footerName = document.getElementById('footer-name')
+
+function fitFooterName() {
+  const padding   = 32
+  const available = window.innerWidth - padding
+  footerName.style.fontSize = '500px'
+  footerName.style.fontSize = Math.floor(500 * available / footerName.scrollWidth) + 'px'
+}
+
+document.fonts.ready.then(() => {
+  fitFooterName()
+  window.addEventListener('resize', fitFooterName)
+})
+
+
 // ── Hero: word-by-word entrance ──────────────────────────────────────────────
 // Split on <br> first to preserve the line break, then animate each word
 const heading = document.getElementById('hero-heading')

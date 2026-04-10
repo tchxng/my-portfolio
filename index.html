@@ -44,7 +44,7 @@
     </div>
 
     <!-- HERO — sticky so next section scrolls over it -->
-    <section id="hero" class="sticky top-0 h-screen overflow-hidden">
+    <section id="hero" class="sticky top-0 z-10 h-screen overflow-hidden">
 
       <!-- Video background -->
       <video id="hero-video"
@@ -342,10 +342,42 @@
       <img id="lightbox-img" src="" alt="" class="object-contain cursor-zoom-in select-none" />
     </div>
 
-    <!-- Remaining page content placeholder -->
-    <div class="relative z-10 bg-zinc-950 h-screen flex items-center justify-center">
-      <p class="text-zinc-600 text-sm font-['IBM_Plex_Mono']">more sections coming</p>
-    </div>
+    <!-- Footer -->
+    <footer id="footer" class="relative z-10 pt-12 overflow-hidden" style="background-color: #e8e9ea;">
+
+      <!-- Top: two columns -->
+      <div class="mx-auto px-10 lg:px-20 mb-4">
+        <div class="grid grid-cols-[3fr_2fr] sm:grid-cols-[3fr_1fr] gap-8 sm:gap-16 items-end">
+
+          <!-- Left: blurb + links -->
+          <div class="flex flex-col gap-3 items-start">
+            <p class="text-sm text-zinc-600 leading-relaxed max-w-md">
+              The best way to reach me is through LinkedIn or ClearanceJobs. My resume also has additional contact info.
+            </p>
+            <a href="https://www.linkedin.com/in/timothycheng-/" target="_blank" rel="noopener"
+              class="text-sm font-semibold text-zinc-800 hover:text-zinc-500 transition-colors">
+              Message me on LinkedIn
+            </a>
+            <a href="/assets/Tim-Cheng-Resume.pdf" target="_blank"
+              class="text-sm font-semibold text-zinc-800 hover:text-zinc-500 transition-colors">
+              View my resume
+            </a>
+          </div>
+
+          <!-- Right: satellite dish, right-aligned, bottom-aligned -->
+          <div class="flex justify-end items-end">
+            <img src="/assets/images/satellite-dish-black.svg" alt="" class="w-20 sm:w-28 h-auto opacity-70" />
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bottom: full-width Tim Cheng -->
+      <div class="px-4 pb-4 overflow-hidden">
+        <p id="footer-name" class="font-bold text-zinc-300 whitespace-nowrap leading-none" style="font-size: 100px;">Tim Cheng</p>
+      </div>
+
+    </footer>
 
     <script type="module" src="/src/main.js"></script>
   </body>
