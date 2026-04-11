@@ -24,7 +24,7 @@
       <nav class="hidden md:flex items-center gap-8">
         <a href="#projects" class="text-sm text-white/70 hover:text-white transition-colors duration-200">Projects</a>
         <a href="#about"    class="text-sm text-white/70 hover:text-white transition-colors duration-200">About</a>
-        <a href="#contact"  class="text-sm border border-white/50 text-white px-5 py-2 rounded-full hover:bg-white hover:text-black transition-all duration-200">Contact</a>
+        <a href="#contact"  class="btn-primary text-sm px-5 py-2 rounded-full">Contact</a>
       </nav>
 
       <!-- Mobile hamburger button -->
@@ -40,7 +40,7 @@
       class="fixed inset-0 z-40 bg-black flex flex-col items-center justify-center gap-10">
       <a href="#projects" class="text-2xl text-white/70 hover:text-white transition-colors">Projects</a>
       <a href="#about"    class="text-2xl text-white/70 hover:text-white transition-colors">About</a>
-      <a href="#contact"  class="text-xl border border-white/50 text-white px-8 py-3 rounded-full hover:bg-white hover:text-black transition-all">Contact</a>
+      <a href="#contact"  class="btn-primary text-xl px-8 py-3 rounded-full">Contact</a>
     </div>
 
     <!-- HERO — sticky so next section scrolls over it -->
@@ -195,9 +195,9 @@
               <p class="text-zinc-700 text-sm leading-relaxed">I'm driven to create beautiful designs that deliver information in the most impactful way. When I'm not building websites, I love working out, playing piano, and exploring local restaurants.</p>
 
               <div class="flex flex-wrap gap-4 mt-2">
-                <a href="#" class="bg-zinc-900 text-white text-sm px-6 py-3 rounded-full hover:bg-zinc-700 transition-colors duration-200">View LinkedIn Profile</a>
+                <a href="#" class="btn-primary text-sm px-6 rounded-full" style="padding-top: 13px; padding-bottom: 12px;">View LinkedIn Profile</a>
                 <!-- Desktop only: Download Resume sits next to LinkedIn -->
-                <a href="#" class="hidden lg:inline-block border border-zinc-400 text-zinc-800 text-sm px-6 py-3 rounded-full hover:bg-zinc-900 hover:text-white hover:border-zinc-900 transition-all duration-200">Download Resume</a>
+                <a href="#" class="btn-secondary hidden lg:inline-block text-sm px-6 rounded-full" style="padding-top: 13px; padding-bottom: 12px;">Download Resume</a>
               </div>
             </div>
 
@@ -234,7 +234,7 @@
         </div>
 
         <!-- Mobile only: Download Resume appears below the cards -->
-        <a href="#" class="lg:hidden inline-block mt-8 border border-zinc-400 text-zinc-800 text-sm px-6 py-3 rounded-full hover:bg-zinc-900 hover:text-white hover:border-zinc-900 transition-all duration-200">Download Resume</a>
+        <a href="#" class="btn-secondary lg:hidden inline-block mt-8 text-sm px-6 py-3 rounded-full">Download Resume</a>
 
       </div>
     </section>
@@ -346,13 +346,13 @@
     <footer id="footer" class="relative z-10 pt-12 overflow-hidden" style="background-color: #e8e9ea;">
 
       <!-- Top: two columns -->
-      <div class="mx-auto px-10 lg:px-20 mb-4">
-        <div class="grid grid-cols-[3fr_2fr] sm:grid-cols-[3fr_1fr] gap-8 sm:gap-16 items-end">
+      <div class="mx-auto px-16 lg:px-24 mb-4 lg:mb-0">
+        <div class="grid grid-cols-[3fr_2fr] sm:grid-cols-[3fr_1fr] gap-8 sm:gap-16">
 
           <!-- Left: blurb + links -->
-          <div class="flex flex-col gap-3 items-start">
+          <div class="flex flex-col gap-3 items-start self-start">
             <p class="text-sm text-zinc-600 leading-relaxed max-w-md">
-              The best way to reach me is through LinkedIn or ClearanceJobs. My resume also has additional contact info.
+              The best way to reach me is through LinkedIn or ClearanceJobs. My resume also has additional contact information.
             </p>
             <a href="https://www.linkedin.com/in/timothycheng-/" target="_blank" rel="noopener"
               class="text-sm font-semibold text-zinc-800 hover:text-zinc-500 transition-colors">
@@ -365,8 +365,8 @@
           </div>
 
           <!-- Right: satellite dish, right-aligned, bottom-aligned -->
-          <div class="flex justify-end items-end">
-            <img src="/assets/images/satellite-dish-black.svg" alt="" class="w-20 sm:w-28 h-auto opacity-70" />
+          <div class="flex justify-end items-end self-end">
+            <img src="/assets/images/satellite-dish-black.svg" alt="" class="footer-dish w-20 sm:w-28 h-auto opacity-70" />
           </div>
 
         </div>
@@ -374,7 +374,7 @@
 
       <!-- Bottom: full-width Tim Cheng -->
       <div class="px-4 pb-4 overflow-hidden">
-        <p id="footer-name" class="font-bold text-zinc-300 whitespace-nowrap leading-none" style="font-size: 100px;">Tim Cheng</p>
+        <p id="footer-name" class="font-bold whitespace-nowrap leading-none" style="font-size: 100px; color: #b8c8d0;">Tim Cheng</p>
       </div>
 
     </footer>

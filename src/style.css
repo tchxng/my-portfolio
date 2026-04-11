@@ -1,5 +1,39 @@
 @import "tailwindcss";
 
+/* Primary button — solid slate-blue, darkens on hover */
+.btn-primary {
+  background-color: #4b7188;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+.btn-primary:hover {
+  background-color: #3a5a6e;
+}
+
+/* Secondary button — outlined, hover fills with desaturated slate-blue */
+.btn-secondary {
+  border: 1px solid #9aadb8;
+  color: #3a4a52;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.btn-secondary:hover {
+  background-color: #b8c8d0;
+  border-color: #b8c8d0;
+  color: #1e3040;
+}
+
+
+/* Footer satellite dish */
+.footer-dish {
+  transform: scale(1.45);
+  transform-origin: right bottom;
+}
+
+@media (min-width: 640px) {
+  .footer-dish {
+    transform: scale(1.45) translateY(27%);
+  }
+}
 
 /* Hamburger button */
 .hamburger {
