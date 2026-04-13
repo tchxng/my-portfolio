@@ -11,7 +11,8 @@
       "Bash(cp \"/c/Users/xtimo/Documents/2 Career/Portfolio Website/Assets/dn-desktop.webp\" \"/c/Users/xtimo/Documents/6_Coding/my-portfolio/public/assets/images/\")",
       "Bash(cp \"/c/Users/xtimo/Documents/2 Career/Portfolio Website/Assets/tcps-tablet.webp\" \"/c/Users/xtimo/Documents/6_Coding/my-portfolio/public/assets/images/\")",
       "Read(//c/Users/xtimo/Documents/2 Career/Portfolio Website/Satoshi/**)",
-      "Read(//c/Users/xtimo/Documents/2 Career/Portfolio Website/Satoshi/WEB/**)"
+      "Read(//c/Users/xtimo/Documents/2 Career/Portfolio Website/Satoshi/WEB/**)",
+      "Bash(python -c \"from PIL import Image; print\\('Pillow available'\\)\")"
     ]
   }
 }

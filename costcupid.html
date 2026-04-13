@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CostCupid – Tim Cheng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="bg-black text-white font-['Satoshi']">
+
+    <!-- NAVBAR -->
+    <header class="nav-scrolled fixed top-0 left-0 right-0 z-50 px-8 py-5 flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="/" aria-label="Tim Cheng home">
+        <img src="/assets/images/tim-cheng-logo.svg" alt="Tim Cheng" class="h-8 w-auto" />
+      </a>
+
+      <!-- Desktop nav links -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="/#projects" class="text-sm text-white/70 hover:text-white transition-colors duration-200">Projects</a>
+        <a href="/#about"    class="text-sm text-white/70 hover:text-white transition-colors duration-200">About</a>
+        <a href="/#contact"  class="btn-primary text-sm px-5 py-2 rounded-full">Contact</a>
+      </nav>
+
+      <!-- Mobile hamburger button -->
+      <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" class="md:hidden hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <!-- Mobile menu (full-screen overlay) -->
+    <div id="mobile-menu"
+      class="fixed inset-0 z-40 bg-black flex flex-col items-center justify-center gap-10">
+      <a href="/#projects" class="text-2xl text-white/70 hover:text-white transition-colors">Projects</a>
+      <a href="/#about"    class="text-2xl text-white/70 hover:text-white transition-colors">About</a>
+      <a href="/#contact"  class="btn-primary text-xl px-8 py-3 rounded-full">Contact</a>
+    </div>
+
+    <!-- ─── PROJECT HEADER ──────────────────────────────────────────────────── -->
+    <section class="pt-48 pb-16 px-8" style="background-color: #f0f1f2;">
+      <div class="max-w-7xl mx-auto px-8 lg:px-16">
+
+        <!-- Name left / Tagline right -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mb-16">
+          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-light text-zinc-900 leading-none">CostCupid</h1>
+          <p class="text-2xl sm:text-3xl lg:text-4xl font-light text-zinc-700 leading-snug self-end">
+            A fun and interactive wedding budgeting tool with an easy-to-use dashboard.
+          </p>
+        </div>
+
+        <!-- Metadata row -->
+        <div class="border-t border-zinc-300 pt-8 grid grid-cols-3 gap-8">
+
+          <div>
+            <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-2">Role</p>
+            <p class="text-zinc-800 text-sm">UX Research, UI Design</p>
+          </div>
+
+          <div>
+            <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-2">Platform</p>
+            <p class="text-zinc-800 text-sm">Responsive Web</p>
+          </div>
+
+          <div>
+            <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-2">Scope</p>
+            <p class="text-zinc-800 text-sm">1.5 months, Self-started project</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── HERO IMAGE ───────────────────────────────────────────────────────── -->
+    <div class="w-full">
+      <img
+        src="/assets/images/costcupid/costcupid-spotlight.webp"
+        alt="CostCupid spotlight"
+        class="w-full object-cover"
+      />
+    </div>
+
+    <!-- ─── CASE STUDY BODY ──────────────────────────────────────────────────── -->
+    <main class="pt-24 pb-8 px-8" style="background-color: #fff;">
+      <div class="max-w-7xl mx-auto px-8 lg:px-16">
+
+        <!-- ── Background ── -->
+        <div class="case-section grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24 mb-24 pb-24 border-b border-zinc-300">
+          <div>
+            <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-3 mt-2">[ OVERVIEW ]</p>
+          </div>
+          <div class="flex flex-col gap-5">
+            <h2 class="text-zinc-900 text-2xl font-light leading-snug">
+              Newly engaged couples often ask, “How much should we spend for our wedding?” 
+            </h2>
+            <p class="text-zinc-700 text-sm leading-relaxed">
+              Creating a budget can be stressful, and online resources yield a wide range of advice that don’t always account for location, time of year, and couples’ preferences. Those one-size-fits-all percentages don’t cut it for such a highly personalized event.            
+            </p>
+            <p class="text-zinc-700 text-sm leading-relaxed">
+              <strong>CostCupid is a simple budgeting tool that creates a custom budget by asking users a series of questions in a creative and engaging format.</strong> There’s an accompanying dashboard app that allows users to track expenses and contributions over time.            </p>
+            </p>
+          </div>
+        </div>    
+
+        <!-- ── Research: Surveys ── -->
+        <div class="case-section mb-24 pb-24 border-b border-zinc-300">
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24 mb-12">
+            <div>
+              <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-3 mt-2">[ RESEARCH SURVEYS ]</p>
+            </div>
+            <div class="flex flex-col gap-5">
+              <h2 class="text-zinc-900 text-2xl font-light leading-snug">
+                Let's ask the married couples first.
+              </h2>
+              <p class="text-zinc-700 text-sm leading-relaxed">
+                In order to validate my assumptions about wedding budgeting, I created and distributed a short survey to 23 respondents.
+              </p>
+            </div>
+          </div>
+
+          <!-- Survey image: side by side on desktop, stacked on mobile -->
+          <div class="w-full lg:w-3/4 mx-auto">
+            <picture>
+              <source media="(max-width: 767px)" srcset="/assets/images/costcupid/both-surveys-stacked.webp" />
+              <img
+                src="/assets/images/costcupid/both-surveys.webp"
+                alt="Survey results showing how couples manage wedding budgets"
+                class="w-full rounded-sm"
+              />
+            </picture>
+          </div>
+          
+          <div class="w-full lg:w-2/3 mx-auto mt-8 flex flex-col gap-4 text-zinc-700 text-sm leading-relaxed">
+            <p>
+              A majority of respondents expressed feeling stressed from <strong>balancing all of the assorted costs</strong> as well as <strong>feeling pressure to spend more</strong> than they could afford. Many of them resorted to basic spreadsheets because existing tools had a learning curve and <strong>lacked customization</strong>. Finally, <strong>tracking vendor payment schedules was a sticking point</strong> for many tools.
+            </p>
+          </div>
+        </div>
+
+        <!-- ── Competitive Analysis ── -->
+        <div class="case-section mb-24 pb-24 border-b border-zinc-300">
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24 mb-12">
+            <div>
+              <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-3 mt-2">[ COMPETITIVE ANALYSIS ]</p>
+            </div>
+            <div class="flex flex-col gap-5">
+              <h2 class="text-zinc-900 text-2xl font-light leading-snug">
+                Existing tools leave a lot on the table.
+              </h2>
+              <p class="text-zinc-700 text-sm leading-relaxed">
+                With this knowledge, I did a Google search and explored other popular budgeting tools that show up higher in the results since I assumed these would be the most widely used. I focused my analysis on customization options and ease-of-use.
+              </p>
+            </div>
+          </div>
+
+          <div class="w-full lg:w-3/4 mx-auto">
+            <picture>
+              <source media="(max-width: 767px)" srcset="/assets/images/costcupid/tool-comparisons-stacked.webp" />
+              <img
+                src="/assets/images/costcupid/tool-comparisons.webp"
+                alt="Comparison of existing wedding budgeting tools"
+                class="w-full rounded-sm"
+              />
+            </picture>
+          </div>
+
+
+          <div class="w-full lg:w-2/3 mx-auto mt-8 flex flex-col gap-4 text-zinc-700 text-sm leading-relaxed">
+            <p>Noticing certain trends, I <strong>discovered three ways that I could offer a better product</strong>:</p>
+            <ol class="list-decimal list-outside ml-4 flex flex-col gap-3">
+              <li><strong>Give clarity on how category allocations were calculated.</strong> Users need to feel like they're in control of the budget setting process, and there should be clarity about where their money will be going.</li>
+              <li><strong>Track contractual obligations and payment schedules.</strong> Keep track of all deposit and final payment schedules and provide reminder alerts.</li>
+              <li><strong>Provide a dashboard.</strong> Provide automatically-generated and intuitive charts that show visualizations of monthly spending, contributions, and category spending.</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- ── User Persona ── -->
+        <div class="case-section mb-24 pb-24 border-b border-zinc-300">
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24 mb-12">
+            <div>
+              <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-3 mt-2">[ USER PERSONA ]</p>
+            </div>
+            <div class="flex flex-col gap-5">
+              <h2 class="text-zinc-900 text-2xl font-light leading-snug">
+                Designing for the organized but overwhelmed planner.
+              </h2>
+              <p class="text-zinc-700 text-sm leading-relaxed">
+                I consolidated the information I’d gathered from my surveys into a representative persona. She was used as a reference throughout the entire design life cycle to remain focused when making decisions.
+              </p>
+            </div>
+          </div>
+
+          <div class="w-full lg:w-3/4 mx-auto">
+            <img
+              src="/assets/images/costcupid/user-persona.webp"
+              alt="CostCupid user persona"
+              class="w-full rounded-sm"
+            />
+          </div>
+        </div>
+
+        <!-- ── Interaction Design ── -->
+        <div class="case-section mb-24 pb-24 border-b border-zinc-300">
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24 mb-12">
+            <div>
+              <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-3 mt-2">[ INTERACTION DESIGN ]</p>
+            </div>
+            <div class="flex flex-col gap-5">
+              <h2 class="text-zinc-900 text-2xl font-light leading-snug">
+                Making budgeting feel like a fun quiz.
+              </h2>
+              <p class="text-zinc-700 text-sm leading-relaxed">
+                The challenge was to find a way to <strong>give the user a sense of control</strong> in creating their budget while keeping them engaged throughout. I <strong>opted for a gamification model</strong> through a series of eight questions that would be used to generate a personalized budget. It gives a <strong>“choose your own adventure” feel</strong> to the process.
+              </p>
+            </div>
+          </div>
+
+          <div class="w-full lg:w-3/4 mx-auto">
+            <img
+              src="/assets/images/costcupid/fun-question-style.webp"
+              alt="Fun question-style onboarding screens"
+              class="w-full rounded-sm"
+            />
+          </div>
+        </div>
+
+        <!-- ── Design System ── -->
+        <div class="case-section mb-24 pb-24 border-b border-zinc-300">
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24 mb-12">
+            <div>
+              <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-3 mt-2">[ DESIGN SYSTEM ]</p>
+            </div>
+            <div class="flex flex-col gap-5">
+              <h2 class="text-zinc-900 text-2xl font-light leading-snug">
+                A design system built for playful clarity.
+              </h2>
+              <p class="text-zinc-700 text-sm leading-relaxed">Reflected across the choice of color, buttons, form controls, iconography, and illustrations was a consistent set of brand values I strived to exhibit:</p>
+              <ul class="list-disc list-outside ml-4 flex flex-col gap-3 text-zinc-700 text-sm leading-relaxed">
+                <li><strong>Savvy</strong> – since the color blue is commonly used by financial institutions and perceived as trustworthy and stable, I elected for a more purplish hue to exude a more modern and electrifying feel</li>
+                <li><strong>Fun</strong> – expressed through the use of playful illustrations</li>
+                <li><strong>Contemporary</strong> – modern and clean feel through eye-popping gradients and crisp layouts</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="w-full lg:w-3/4 mx-auto">
+            <img
+              src="/assets/images/costcupid/ui-design-kit.webp"
+              alt="CostCupid UI design kit and component library"
+              class="w-full rounded-sm"
+            />
+          </div>
+        </div>
+
+        <!-- ── Final Design ── -->
+        <div class="case-section mb-24 pb-24 border-b border-zinc-300">
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24 mb-12">
+            <div>
+              <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-3 mt-2">[ FINAL DESIGN ]</p>
+            </div>
+            <div class="flex flex-col gap-5"></div>
+          </div>
+
+          
+
+          <!-- Mockup grid -->
+          <div class="flex flex-col gap-4 mt-4">
+
+            <!-- Row 1: hero (3fr) + desktop (2fr) -->
+            <div class="grid grid-cols-1 lg:grid-cols-[8fr_4fr] gap-4 items-stretch">
+              <div class="overflow-hidden rounded-sm">
+                <img
+                  src="/assets/images/costcupid/costcupid-hero.webp"
+                  alt="CostCupid hero mockup"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="overflow-hidden rounded-sm">
+                <img
+                  src="/assets/images/costcupid/costcupid-desktop.webp"
+                  alt="CostCupid questionnaire on desktop"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <!-- Row 2: style guide full width -->
+            <img
+              src="/assets/images/costcupid/costcupid-style-guide.webp"
+              alt="CostCupid style guide"
+              class="w-full rounded-sm"
+            />
+
+            <!-- Row 3: laptop (2fr) + dashboard (3fr) -->
+            <div class="grid grid-cols-1 lg:grid-cols-[5fr_7fr] gap-4 items-stretch">
+              <div class="overflow-hidden rounded-sm">
+                <img
+                  src="/assets/images/costcupid/costcupid-laptop.webp"
+                  alt="CostCupid budget results on laptop"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="overflow-hidden rounded-sm">
+                <img
+                  src="/assets/images/costcupid/costcupid-dashboard.webp"
+                  alt="CostCupid dashboard mockup"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── Reflections ── -->
+        <div class="case-section mb-8 pb-8">
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24 mb-12">
+            <div>
+              <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-3 mt-2">[ REFLECTIONS ]</p>
+            </div>
+            <div class="flex flex-col gap-5">
+              <h2 class="text-zinc-900 text-2xl font-light leading-snug">
+                Conducting surveys and identifying gaps in similar product offerings can yield new approaches.
+              </h2>
+              <p class="text-zinc-700 text-sm leading-relaxed">Just because all of the main competitors do things one way doesn’t prohibit me from trying a different approach - in this case, electing for a more interactive budget creation process and adding on a more visually striking dashboard.</p>
+              <h2 class="text-zinc-900 text-2xl font-light leading-snug">
+                Establish a brand identity early. 
+              </h2>
+              <p class="text-zinc-700 text-sm leading-relaxed">Even though I ended up tweaking the UI style kit many times throughout the design process, the core brand identity - to be savvy, fun, and contemporary - was a constant pillar from the onset.</p>
+              <p class="text-zinc-700 text-sm leading-relaxed">The next step is to conduct more usability testing and get feedback on users’ thought processes as they’re answering questions. Moreover, I’d like to build out the other pages in the dashboard and seek input on how to make the most effective visuals.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- ─── PROJECT NAVIGATION ──────────────────────────────────────────────── -->
+    <div class="grid grid-cols-1 md:grid-cols-2" style="background-color: #4b7188;">
+
+      <!-- Previous Project -->
+      <a href="/tim-cheng-music" class="group relative overflow-hidden block px-16 py-12 border-r border-white/20">
+        <img src="/assets/images/tcps-landing-pages.webp" alt=""
+          class="absolute inset-0 w-full h-full object-cover object-top opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="relative z-10">
+          <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-white/60 group-hover:text-white/80 mb-4 transition-colors duration-300">[ PREVIOUS PROJECT ]</p>
+          <h2 class="text-white text-4xl font-light transition-colors duration-300">Tim Cheng Music</h2>
+        </div>
+      </a>
+
+      <!-- Next Project -->
+      <a href="/diverse-narrative" class="group relative overflow-hidden block px-16 py-12 md:text-right">
+        <img src="/assets/images/dn-homepage.webp" alt=""
+          class="absolute inset-0 w-full h-full object-cover object-top opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="relative z-10">
+          <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-white/60 group-hover:text-white/80 mb-4 transition-colors duration-300">[ NEXT PROJECT ]</p>
+          <h2 class="text-white text-4xl font-light transition-colors duration-300">The Diverse Narrative</h2>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- ─── FOOTER ───────────────────────────────────────────────────────────── -->
+    <footer id="footer" class="relative z-10 pt-12 overflow-hidden" style="background-color: #e8e9ea;">
+
+      <!-- Top: two columns -->
+      <div class="mx-auto px-16 lg:px-24 mb-4 lg:mb-0">
+        <div class="grid grid-cols-[3fr_2fr] sm:grid-cols-[3fr_1fr] gap-8 sm:gap-16 px-0 xl:px-2">
+
+          <!-- Left: blurb + links -->
+          <div class="flex flex-col gap-3 items-start self-start">
+            <p class="text-sm text-zinc-600 leading-relaxed max-w-md">
+              The best way to reach me is through LinkedIn or ClearanceJobs. My resume also has additional contact information.
+            </p>
+            <a href="https://www.linkedin.com/in/timothycheng-/" target="_blank" rel="noopener"
+              class="text-sm font-semibold text-zinc-800 hover:text-zinc-500 transition-colors">
+              Message me on LinkedIn
+            </a>
+            <a href="/assets/Tim-Cheng-Resume.pdf" target="_blank"
+              class="text-sm font-semibold text-zinc-800 hover:text-zinc-500 transition-colors">
+              View my resume
+            </a>
+          </div>
+
+          <!-- Right: satellite dish -->
+          <div class="flex justify-end items-end self-end">
+            <img src="/assets/images/satellite-dish-black.svg" alt="" class="footer-dish w-20 sm:w-28 h-auto opacity-70" />
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bottom: full-width Tim Cheng -->
+      <div class="px-4 pb-4 overflow-hidden">
+        <p id="footer-name" class="font-bold whitespace-nowrap leading-none" style="font-size: 100px; color: #b8c8d0;">Tim Cheng</p>
+      </div>
+
+    </footer>
+
+    <script type="module" src="/src/costcupid.js"></script>
+  </body>
+</html>
