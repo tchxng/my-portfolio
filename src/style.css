@@ -163,24 +163,36 @@
 
 .stat-card {
   opacity: 0;
-  transform: translateX(80px);
+  transform: translateY(24px);
   transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+@media (min-width: 1024px) {
+  .stat-card {
+    transform: translateX(80px);
+  }
 }
 
 .stat-card.is-visible {
   opacity: 1;
-  transform: translateX(0);
+  transform: translate(0, 0);
 }
 
 .project-card {
   opacity: 0;
-  transform: translateX(80px);
+  transform: translateY(24px);
   transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+@media (min-width: 1024px) {
+  .project-card {
+    transform: translateX(80px);
+  }
 }
 
 .project-card.is-visible {
   opacity: 1;
-  transform: translateX(0);
+  transform: translate(0, 0);
 }
 
 /* Project card image hover: pan left-to-right with zoom — desktop only */
