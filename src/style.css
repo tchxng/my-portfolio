@@ -183,52 +183,62 @@
   transform: translateX(0);
 }
 
-/* Project card image hover: pan left-to-right with zoom */
+/* Project card image hover: pan left-to-right with zoom — desktop only */
 @keyframes panZoom {
   from { transform: scale(1.05) translateX(0%); }
   to   { transform: scale(1.12) translateX(-8%); }
 }
 
 .project-img-hover {
-  transform-origin: left center;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.project-img-hover.is-panning {
-  animation: panZoom 2.5s ease-in-out forwards;
-}
-
-.project-card:hover .project-img-default {
   opacity: 0;
 }
 
-.project-card:hover .project-img-hover {
-  opacity: 1;
+@media (min-width: 1024px) {
+  .project-img-hover {
+    transform-origin: left center;
+    transition: opacity 0.4s ease;
+  }
+
+  .project-img-hover.is-panning {
+    animation: panZoom 2.5s ease-in-out forwards;
+  }
+
+  .project-card:hover .project-img-default {
+    opacity: 0;
+  }
+
+  .project-card:hover .project-img-hover {
+    opacity: 1;
+  }
 }
 
-/* Gallery grid hover: CSS transition-driven, responsive in both directions */
+/* Gallery grid hover: CSS transition-driven, desktop only */
 .gallery-img {
   transform-origin: left center;
   transform: scale(1) translateX(0%);
-  transition: transform 1.8s ease-out;
 }
 
-.gallery-img.is-panning {
-  transform: scale(1.12) translateX(-8%);
-  transition: transform 1.8s ease-out;
-}
+@media (min-width: 1024px) {
+  .gallery-img {
+    transition: transform 1.8s ease-out;
+  }
 
-.gallery-img.is-resetting {
-  transition: transform 0.55s ease-in;
-}
+  .gallery-img.is-panning {
+    transform: scale(1.12) translateX(-8%);
+    transition: transform 1.8s ease-out;
+  }
 
-/* NextWave: slight zoom to hide white border on grid view */
-.nextwave-crop .gallery-img {
-  transform: scale(1.02) translateX(-1%);
-}
-.nextwave-crop .gallery-img.is-panning {
-  transform: scale(1.13) translateX(-8%);
+  .gallery-img.is-resetting {
+    transition: transform 0.55s ease-in;
+  }
+
+  /* NextWave: slight zoom to hide white border on grid view */
+  .nextwave-crop .gallery-img {
+    transform: scale(1.02) translateX(-1%);
+  }
+  .nextwave-crop .gallery-img.is-panning {
+    transform: scale(1.13) translateX(-8%);
+  }
 }
 
 /* Gallery items: fade in staggered on scroll into view */
