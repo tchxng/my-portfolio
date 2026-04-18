@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tim Cheng Music – Tim Cheng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="bg-black text-white font-['Satoshi']">
+
+    <!-- NAVBAR -->
+    <header class="nav-scrolled fixed top-0 left-0 right-0 z-50 px-8 py-5 flex items-center justify-between">
+      <a href="/" aria-label="Tim Cheng home">
+        <img src="/assets/images/tim-cheng-logo.svg" alt="Tim Cheng" class="h-8 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="/#projects" class="text-sm text-white/70 hover:text-white transition-colors duration-200">Projects</a>
+        <a href="/#about"    class="text-sm text-white/70 hover:text-white transition-colors duration-200">About</a>
+        <a href="/#contact"  class="btn-primary text-sm px-5 py-2 rounded-full">Contact</a>
+      </nav>
+      <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" class="md:hidden hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-black flex flex-col items-center justify-center gap-10">
+      <a href="/#projects" class="text-2xl text-white/70 hover:text-white transition-colors">Projects</a>
+      <a href="/#about"    class="text-2xl text-white/70 hover:text-white transition-colors">About</a>
+      <a href="/#contact"  class="btn-primary text-xl px-8 py-3 rounded-full">Contact</a>
+    </div>
+
+    <!-- ─── PROJECT HEADER ──────────────────────────────────────────────────── -->
+    <section class="pt-48 pb-16 px-8" style="background-color: #f0f1f2;">
+      <div class="max-w-7xl mx-auto px-8 lg:px-16">
+
+        <!-- Name left / Tagline right -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mb-16">
+          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-light text-zinc-900 leading-none">Tim Cheng Music</h1>
+          <p class="text-xl sm:text-2xl lg:text-3xl font-light text-zinc-700 leading-snug self-end">
+            A landing page to inform prospective students about my piano studio.
+          </p>
+        </div>
+
+        <!-- Metadata row -->
+        <div class="border-t border-zinc-300 pt-8 grid grid-cols-3 gap-8">
+          <div>
+            <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-2">Role</p>
+            <p class="text-zinc-800 text-sm">UX Research, UI Design, Web Development</p>
+          </div>
+          <div>
+            <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-2">Platform</p>
+            <p class="text-zinc-800 text-sm">Responsive Web</p>
+          </div>
+          <div>
+            <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-2">Scope</p>
+            <p class="text-zinc-800 text-sm">1 month, Active website</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── HERO IMAGE ───────────────────────────────────────────────────────── -->
+    <div class="w-full">
+      <img
+        src="/assets/images/tim-cheng-music/tcps-spotlight.webp"
+        alt="Tim Cheng Music spotlight"
+        class="w-full object-cover"
+      />
+    </div>
+
+    <!-- ─── CASE STUDY BODY ──────────────────────────────────────────────────── -->
+    <main class="pt-24 pb-8 px-8" style="background-color: #fff;">
+      <div class="max-w-7xl mx-auto px-8 lg:px-16">
+
+        <!-- ── Background ── -->
+        <div class="case-section grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24 mb-24 pb-24 border-b border-zinc-300">
+          <div>
+            <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-3 mt-2">[ BACKGROUND ]</p>
+          </div>
+          <div class="flex flex-col gap-5">
+            <h2 class="text-zinc-900 text-2xl font-light leading-snug">
+              Fun fact: I've been teaching piano as a side hobby since 2015.
+            </h2>
+            <p class="text-zinc-700 text-sm leading-relaxed">
+              I get a fair amount of inquiries but lack a website to direct people to for more information. This responsive site would function as my virtual storefront.
+            </p>
+            <p class="text-zinc-700 text-sm leading-relaxed">
+              <strong>Build an attractive website for bringing in new piano students</strong> that provides all the information a prospective student would want to know — who I am, why they should join my studio, pricing plans, and how to reach out.
+            </p>
+          </div>
+        </div>
+
+        <!-- ── User Research ── -->
+        <div class="case-section mb-24 pb-24 border-b border-zinc-300">
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24 mb-12">
+            <div>
+              <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-3 mt-2">[ USER RESEARCH ]</p>
+            </div>
+            <div class="flex flex-col gap-5">
+              <h2 class="text-zinc-900 text-2xl font-light leading-snug">
+                Mapping the hesitations of parents and first-time students.
+              </h2>
+              <p class="text-zinc-700 text-sm leading-relaxed">
+                Throughout my years of teaching experience, I've often asked my students and their parents how their experiences were when looking for a piano instructor. Some of the common threads I've observed are captured in this empathy map.
+              </p>
+            </div>
+          </div>
+
+          <div class="w-full lg:w-1/2 mx-auto">
+            <img
+              src="/assets/images/tim-cheng-music/empathy-map.webp"
+              alt="Empathy map for prospective piano students"
+              class="w-full rounded-sm"
+            />
+          </div>
+        </div>
+
+        <!-- ── Site Architecture ── -->
+        <div class="case-section mb-24 pb-24 border-b border-zinc-300">
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24 mb-12">
+            <div>
+              <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-3 mt-2">[ SITE ARCHITECTURE ]</p>
+            </div>
+            <div class="flex flex-col gap-5">
+              <h2 class="text-zinc-900 text-2xl font-light leading-snug">
+                Designing a funnel that feels like a conversation.
+              </h2>
+              <p class="text-zinc-700 text-sm leading-relaxed">
+                I organized the site architecture into four simple pages with clear Call to Actions (CTAs). The homepage consists of concise synopses with CTAs to read more on other pages. The About and Pricing pages each have a CTA to fill out a contact form.
+              </p>
+              <p class="text-zinc-700 text-sm leading-relaxed">
+                The site is designed to funnel users through different levels of information, <strong>building up comfortability and enthusiasm</strong> along the way before <strong>ultimately landing on the Contact page.</strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <div class="w-full lg:w-3/4 mx-auto">
+              <img
+                src="/assets/images/tim-cheng-music/sitemap.webp"
+                alt="Site architecture sitemap"
+                class="w-full rounded-sm"
+              />
+            </div>
+            <div class="w-full lg:w-3/4 mx-auto">
+              <img
+                src="/assets/images/tim-cheng-music/user-flow.webp"
+                alt="User flow diagram"
+                class="w-full rounded-sm"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Annotated Design ── -->
+        <div class="case-section mb-24 pb-24 border-b border-zinc-300">
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24 mb-12">
+            <div>
+              <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-3 mt-2">[ DESIGN DECISIONS ]</p>
+            </div>
+            <div class="flex flex-col gap-5">
+              <h2 class="text-zinc-900 text-2xl font-light leading-snug">
+                A site that feels polished, friendly, and inspiring.
+              </h2>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <img
+              src="/assets/images/tim-cheng-music/annotated-homepage.webp"
+              alt="Annotated homepage design"
+              class="w-full rounded-sm"
+            />
+            <img
+              src="/assets/images/tim-cheng-music/annotated-additional-pages.webp"
+              alt="Annotated additional pages design"
+              class="w-full rounded-sm"
+            />
+          </div>
+        </div>
+
+        <!-- ── Final Design ── -->
+        <div class="case-section mb-24 pb-24 border-b border-zinc-300">
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24 mb-12">
+            <div>
+              <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-3 mt-2">[ FINAL DESIGN ]</p>
+            </div>
+            <div class="flex flex-col gap-5"></div>
+          </div>
+
+          <!-- 12-column mockup grid -->
+          <div class="grid grid-cols-12 gap-4">
+
+            <!-- Rows 1–2 left (9 cols, row-span-2): landing pages -->
+            <div class="col-span-12 lg:col-span-9 lg:row-span-2 overflow-hidden rounded-sm">
+              <img src="/assets/images/tim-cheng-music/tcps-landing-pages.webp" alt="Tim Cheng Music landing pages" class="w-full h-full object-cover" />
+            </div>
+            <!-- Row 1 right (3 cols): logo -->
+            <div class="col-span-12 lg:col-span-3 overflow-hidden rounded-sm">
+              <img src="/assets/images/tim-cheng-music/tcps-logo.webp" alt="Tim Cheng Music logo" class="w-full h-full object-cover" />
+            </div>
+            <!-- Row 2 right (3 cols): mobile -->
+            <div class="col-span-12 lg:col-span-3 overflow-hidden rounded-sm">
+              <img src="/assets/images/tim-cheng-music/tcps-mobile.webp" alt="Tim Cheng Music on mobile" class="w-full h-full object-cover" />
+            </div>
+
+            <!-- Row 3 left (4 cols): icons -->
+            <div class="col-span-12 lg:col-span-4 overflow-hidden rounded-sm">
+              <img src="/assets/images/tim-cheng-music/tcps-icons.webp" alt="Tim Cheng Music icons" class="w-full h-full object-cover" />
+            </div>
+            <!-- Rows 3–4 right (8 cols, row-span-2): tablet -->
+            <div class="col-span-12 lg:col-span-8 lg:row-span-2 overflow-hidden rounded-sm">
+              <img src="/assets/images/tim-cheng-music/tcps-tablet.webp" alt="Tim Cheng Music on tablet" class="w-full h-full object-cover" />
+            </div>
+            <!-- Row 4 left (4 cols): dal segno -->
+            <div class="col-span-12 lg:col-span-4 overflow-hidden rounded-sm">
+              <img src="/assets/images/tim-cheng-music/tcps-dal-segno.webp" alt="Dal segno motif" class="w-full h-full object-cover" />
+            </div>
+
+            <!-- Row 5: macbook (6) + illustrations (6) -->
+            <div class="col-span-12 lg:col-span-6 overflow-hidden rounded-sm">
+              <img src="/assets/images/tim-cheng-music/tcps-macbook.webp" alt="Tim Cheng Music on MacBook" class="w-full h-full object-cover" />
+            </div>
+            <div class="col-span-12 lg:col-span-6 overflow-hidden rounded-sm">
+              <img src="/assets/images/tim-cheng-music/tcps-illustrations.webp" alt="Tim Cheng Music illustrations" class="w-full h-full object-cover" />
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── Reflections ── -->
+        <div class="case-section mb-8 pb-8">
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24 mb-12">
+            <div>
+              <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-3 mt-2">[ REFLECTIONS ]</p>
+            </div>
+            <div class="flex flex-col gap-5">
+              <h2 class="text-zinc-900 text-2xl font-light leading-snug">
+                Organize the information I want to impart into a story.
+              </h2>
+              <p class="text-zinc-700 text-sm leading-relaxed">
+                I have to be prepared for a user to land on any page and be able to naturally find their way around the site through digestible snippets and strategically placed CTAs.
+              </p>
+              <h2 class="text-zinc-900 text-2xl font-light leading-snug">
+                The use of a motif can tie a site together nicely.
+              </h2>
+              <p class="text-zinc-700 text-sm leading-relaxed">
+                I struggled to find a way to incorporate my personality but experimented with varying geometric shapes and music symbols until I found a balance that I was pleased with. The final design was far from what I originally envisioned but it came together through many iterations.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- ─── PROJECT NAVIGATION ──────────────────────────────────────────────── -->
+    <div class="grid grid-cols-1 md:grid-cols-2" style="background-color: #4b7188;">
+
+      <!-- Previous Project -->
+      <a href="/diverse-narrative" class="group relative overflow-hidden block px-16 py-12 border-b border-white/20 md:border-b-0 md:border-r">
+        <img src="/assets/images/dn-homepage.webp" alt=""
+          class="absolute inset-0 w-full h-full object-cover object-top opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="relative z-10">
+          <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-white/60 group-hover:text-white/80 mb-4 transition-colors duration-300">[ PREVIOUS PROJECT ]</p>
+          <h2 class="text-white text-4xl font-light transition-colors duration-300">The Diverse Narrative</h2>
+        </div>
+      </a>
+
+      <!-- Next Project -->
+      <a href="/costcupid" class="group relative overflow-hidden block px-16 py-12 md:text-right">
+        <img src="/assets/images/costcupid-hero.webp" alt=""
+          class="absolute inset-0 w-full h-full object-cover object-center opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="relative z-10">
+          <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-white/60 group-hover:text-white/80 mb-4 transition-colors duration-300">[ NEXT PROJECT ]</p>
+          <h2 class="text-white text-4xl font-light transition-colors duration-300">CostCupid</h2>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- ─── FOOTER ───────────────────────────────────────────────────────────── -->
+    <footer id="contact" class="relative z-10 pt-12 overflow-hidden" style="background-color: #e8e9ea;">
+      <div class="mx-auto px-16 lg:px-24 mb-4 lg:mb-0">
+        <div class="grid grid-cols-[3fr_2fr] sm:grid-cols-[3fr_1fr] gap-8 sm:gap-16 px-0 xl:px-2">
+          <div class="flex flex-col gap-3 items-start self-start">
+            <p class="text-sm text-zinc-600 leading-relaxed max-w-md">
+              The best way to reach me is through LinkedIn or ClearanceJobs. My resume also has additional contact information.
+            </p>
+            <a href="https://www.linkedin.com/in/cheng-tim/" target="_blank" rel="noopener"
+              class="text-sm font-semibold text-zinc-600 hover:text-zinc-500 transition-colors">
+              Message me on LinkedIn
+            </a>
+            <a href="/assets/Tim-Cheng-UI-UX-Developer.pdf" target="_blank"
+              class="text-sm font-semibold text-zinc-600 hover:text-zinc-500 transition-colors">
+              View my resume
+            </a>
+          </div>
+          <div class="flex justify-end items-end self-end">
+            <img src="/assets/images/satellite-dish-black.svg" alt="" class="footer-dish w-20 sm:w-28 h-auto opacity-70" />
+          </div>
+        </div>
+      </div>
+      <div class="px-4 pb-4 overflow-hidden">
+        <p id="footer-name" class="font-bold whitespace-nowrap leading-none" style="font-size: 100px; color: #b8c8d0;">Tim Cheng</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/tim-cheng-music.js"></script>
+  </body>
+</html>

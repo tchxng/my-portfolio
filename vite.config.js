@@ -12,6 +12,7 @@ export default defineConfig({
         main:       resolve(__dirname, 'index.html'),
         costcupid:          resolve(__dirname, 'costcupid.html'),
         diverseNarrative:   resolve(__dirname, 'diverse-narrative.html'),
+        timChengMusic:      resolve(__dirname, 'tim-cheng-music.html'),
       },
     },
   },
