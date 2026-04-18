@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+body {
+  overflow-x: clip;
+}
+
 @theme {
   --text-sm: 0.9375rem;
   --text-xs: 0.8125rem;
