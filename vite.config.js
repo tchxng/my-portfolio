@@ -10,7 +10,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main:       resolve(__dirname, 'index.html'),
-        costcupid:  resolve(__dirname, 'costcupid.html'),
+        costcupid:          resolve(__dirname, 'costcupid.html'),
+        diverseNarrative:   resolve(__dirname, 'diverse-narrative.html'),
       },
     },
   },

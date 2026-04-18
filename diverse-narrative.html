@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Diverse Narrative – Tim Cheng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="bg-black text-white font-['Satoshi']">
+
+    <!-- NAVBAR -->
+    <header class="nav-scrolled fixed top-0 left-0 right-0 z-50 px-8 py-5 flex items-center justify-between">
+      <a href="/" aria-label="Tim Cheng home">
+        <img src="/assets/images/tim-cheng-logo.svg" alt="Tim Cheng" class="h-8 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="/#projects" class="text-sm text-white/70 hover:text-white transition-colors duration-200">Projects</a>
+        <a href="/#about"    class="text-sm text-white/70 hover:text-white transition-colors duration-200">About</a>
+        <a href="/#contact"  class="btn-primary text-sm px-5 py-2 rounded-full">Contact</a>
+      </nav>
+      <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" class="md:hidden hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-black flex flex-col items-center justify-center gap-10">
+      <a href="/#projects" class="text-2xl text-white/70 hover:text-white transition-colors">Projects</a>
+      <a href="/#about"    class="text-2xl text-white/70 hover:text-white transition-colors">About</a>
+      <a href="/#contact"  class="btn-primary text-xl px-8 py-3 rounded-full">Contact</a>
+    </div>
+
+    <!-- ─── PROJECT HEADER ──────────────────────────────────────────────────── -->
+    <section class="pt-48 pb-16 px-8" style="background-color: #f0f1f2;">
+      <div class="max-w-7xl mx-auto px-8 lg:px-16">
+
+        <!-- Name left / Tagline right -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mb-16">
+          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-light text-zinc-900 leading-none">The Diverse Narrative</h1>
+          <p class="text-2xl sm:text-3xl lg:text-4xl font-light text-zinc-700 leading-snug self-end">
+            An inclusive online publication that amplifies personal stories across a range of identities and backgrounds.
+          </p>
+        </div>
+
+        <!-- Metadata row -->
+        <div class="border-t border-zinc-300 pt-8 grid grid-cols-3 gap-8">
+          <div>
+            <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-2">Role</p>
+            <p class="text-zinc-800 text-sm">UX Research, UI Design</p>
+          </div>
+          <div>
+            <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-2">Platform</p>
+            <p class="text-zinc-800 text-sm">Responsive Web</p>
+          </div>
+          <div>
+            <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-2">Scope</p>
+            <p class="text-zinc-800 text-sm">Ongoing collaborative project</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── HERO IMAGE ───────────────────────────────────────────────────────── -->
+    <div class="w-full">
+      <img
+        src="/assets/images/diverse-narrative/dn-spotlight.webp"
+        alt="The Diverse Narrative spotlight"
+        class="w-full object-cover"
+      />
+    </div>
+
+    <!-- ─── CASE STUDY BODY ──────────────────────────────────────────────────── -->
+    <main class="pt-24 pb-8 px-8" style="background-color: #fff;">
+      <div class="max-w-7xl mx-auto px-8 lg:px-16">
+
+        <!-- ── Background ── -->
+        <div class="case-section grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24 mb-24 pb-24 border-b border-zinc-300">
+          <div>
+            <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-3 mt-2">[ OVERVIEW ]</p>
+          </div>
+          <div class="flex flex-col gap-5">
+            <h2 class="text-zinc-900 text-2xl font-light leading-snug">
+              In recent years, the news and content we consume has grown increasingly polarized and cynical.
+            </h2>
+            <p class="text-zinc-700 text-sm leading-relaxed">
+              Many media sources serve to confirm our natural biases, reducing our ability to understand and empathize with others in different walks of life.
+            </p>
+            <p class="text-zinc-700 text-sm leading-relaxed">
+              <strong>The Diverse Narrative is an online publication that exposes readers to personal stories encompassing a range of perspectives, identities, and backgrounds.</strong> By challenging stereotypes and biases, it aims to promote understanding and empathy for those who often don't have a voice in society.
+            </p>
+          </div>
+        </div>
+
+        <!-- ── User Research ── -->
+        <div class="case-section mb-24 pb-24 border-b border-zinc-300">
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24 mb-12">
+            <div>
+              <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-3 mt-2">[ USER RESEARCH ]</p>
+            </div>
+            <div class="flex flex-col gap-5">
+              <h2 class="text-zinc-900 text-2xl font-light leading-snug">
+                There's a consumer base... but no one is serving it well.
+              </h2>
+              <p class="text-zinc-700 text-sm leading-relaxed">
+                There's an unmistakable consumer base that exists for digital print and blog content. However, despite the wealth of blog sites and online publications available, <strong>it's rare to find ones focused on diversity and representation.</strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="w-full lg:w-3/4 mx-auto">
+            <picture>
+              <source media="(max-width: 767px)" srcset="/assets/images/diverse-narrative/research-results-stacked.webp" />
+              <img
+                src="/assets/images/diverse-narrative/research-results.webp"
+                alt="Research results"
+                class="w-full rounded-sm"
+              />
+            </picture>
+          </div>
+        </div>
+
+        <!-- ── Project Scope ── -->
+        <div class="case-section mb-24 pb-24 border-b border-zinc-300">
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24 mb-12">
+            <div>
+              <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-3 mt-2">[ PROJECT SCOPE ]</p>
+            </div>
+            <div class="flex flex-col gap-5">
+              <h2 class="text-zinc-900 text-2xl font-light leading-snug">
+                The unique space we're occupying.
+              </h2>
+              <p class="text-zinc-700 text-sm leading-relaxed">
+                The ideal middle consists of the <strong>highly personal narratives</strong> of a social media site, the <strong>unique storytelling</strong> of a personal blog site, and the <strong>curated quality</strong> of an esteemed magazine publication like The New Yorker. The merging of these three qualities puts us in a unique position in this diversity advocacy space.
+              </p>
+            </div>
+          </div>
+
+          <div class="w-full lg:w-1/2 mx-auto">
+            <img
+              src="/assets/images/diverse-narrative/unique-space-venn-diagram.webp"
+              alt="Venn diagram showing the unique space The Diverse Narrative occupies"
+              class="w-full rounded-sm"
+            />
+          </div>
+        </div>
+
+        <!-- ── Information Architecture ── -->
+        <div class="case-section mb-24 pb-24 border-b border-zinc-300">
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24 mb-12">
+            <div>
+              <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-3 mt-2">[ INFORMATION ARCHITECTURE ]</p>
+            </div>
+            <div class="flex flex-col gap-5">
+              <h2 class="text-zinc-900 text-2xl font-light leading-snug">
+                Organizing around searchability.
+              </h2>
+              <p class="text-zinc-700 text-sm leading-relaxed">
+                I organized the information architecture into essential sections and pages along with six key categories that each article can be classified under. This sitemap gives a high-level overview of the navigation structure and hierarchy of the screens.
+              </p>
+            </div>
+          </div>
+
+          <div class="w-full lg:w-3/4 mx-auto">
+            <img
+              src="/assets/images/diverse-narrative/sitemap.webp"
+              alt="The Diverse Narrative sitemap"
+              class="w-full rounded-sm"
+            />
+          </div>
+        </div>
+
+        <!-- ── Wireframes ── -->
+        <div class="case-section mb-24 pb-24 border-b border-zinc-300">
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24 mb-12">
+            <div>
+              <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-3 mt-2">[ WIREFRAMES ]</p>
+            </div>
+            <div class="flex flex-col gap-5">
+              <h2 class="text-zinc-900 text-2xl font-light leading-snug">
+                Wireframes for key pages.
+              </h2>
+              <p class="text-zinc-700 text-sm leading-relaxed">
+                Wireframes for the homepage and select pages were created to get a sense of the basic feel and layout of the website. The wireframes consisted of common design patterns while incorporating the brand values and uniqueness of The Diverse Narrative.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <img
+              src="/assets/images/diverse-narrative/main-wireframe.webp"
+              alt="Main wireframe"
+              class="w-full rounded-sm"
+            />
+            <!-- 3-up: Category / Article / Search grayscale wireframes -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+              <div class="flex flex-col gap-2">
+                <img
+                  src="/assets/images/diverse-narrative/topic-archive-grayscale.webp"
+                  alt="Category page wireframe"
+                  class="w-full rounded-sm"
+                />
+                <p class="text-zinc-500 text-xs text-center font-['IBM_Plex_Mono'] tracking-widest">Category</p>
+              </div>
+              <div class="flex flex-col gap-2">
+                <img
+                  src="/assets/images/diverse-narrative/article-grayscale.webp"
+                  alt="Article page wireframe"
+                  class="w-full rounded-sm"
+                />
+                <p class="text-zinc-500 text-xs text-center font-['IBM_Plex_Mono'] tracking-widest">Article</p>
+              </div>
+              <div class="flex flex-col gap-2">
+                <img
+                  src="/assets/images/diverse-narrative/search-grayscale.webp"
+                  alt="Search page wireframe"
+                  class="w-full rounded-sm"
+                />
+                <p class="text-zinc-500 text-xs text-center font-['IBM_Plex_Mono'] tracking-widest">Search</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Final Design ── -->
+        <div class="case-section mb-24 pb-24 border-b border-zinc-300">
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24 mb-12">
+            <div>
+              <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-3 mt-2">[ COLORED DESIGNS ]</p>
+            </div>
+            <div class="flex flex-col gap-5">
+              <h2 class="text-zinc-900 text-2xl font-light leading-snug">
+                From first iteration to final design.
+              </h2>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div class="overflow-hidden rounded-sm">
+              <img src="/assets/images/diverse-narrative/home.webp" alt="Homepage – first iteration" class="w-full h-full object-cover" />
+            </div>
+            <div class="overflow-hidden rounded-sm">
+              <img src="/assets/images/diverse-narrative/topic-archive.webp" alt="Topic archive – first iteration" class="w-full h-full object-cover" />
+            </div>
+            <div class="overflow-hidden rounded-sm">
+              <img src="/assets/images/diverse-narrative/search-results.webp" alt="Search results – first iteration" class="w-full h-full object-cover" />
+            </div>
+            <div class="overflow-hidden rounded-sm">
+              <img src="/assets/images/diverse-narrative/article.webp" alt="Article page – first iteration" class="w-full h-full object-cover" />
+            </div>
+            <div class="overflow-hidden rounded-sm">
+              <img src="/assets/images/diverse-narrative/about.webp" alt="About page – first iteration" class="w-full h-full object-cover" />
+            </div>
+            <div class="overflow-hidden rounded-sm">
+              <img src="/assets/images/diverse-narrative/contribute.webp" alt="Contribute page – first iteration" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Final Design ── -->
+        <div class="case-section mb-24 pb-24 border-b border-zinc-300">
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24 mb-12">
+            <div>
+              <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-3 mt-2">[ FINAL DESIGN ]</p>
+            </div>
+            <div class="flex flex-col gap-5"></div>
+          </div>
+
+          <!-- 12-column mockup grid -->
+          <div class="grid grid-cols-12 gap-4">
+
+            <!-- Row 1: 6:6 — homepage + article -->
+            <div class="col-span-12 lg:col-span-6 overflow-hidden rounded-sm">
+              <img src="/assets/images/diverse-narrative/dn-homepage.webp" alt="The Diverse Narrative homepage" class="w-full h-full object-cover" />
+            </div>
+            <div class="col-span-12 lg:col-span-6 overflow-hidden rounded-sm">
+              <img src="/assets/images/diverse-narrative/dn-article.webp" alt="The Diverse Narrative article page" class="w-full h-full object-cover" />
+            </div>
+
+            <!-- Rows 2–3 left: mobile spans 2 rows (5 cols) -->
+            <div class="col-span-12 lg:col-span-5 lg:row-span-2 overflow-hidden rounded-sm">
+              <img src="/assets/images/diverse-narrative/dn-mobile.webp" alt="The Diverse Narrative on mobile" class="w-full h-full object-cover" />
+            </div>
+
+            <!-- Row 2 right: logo (4 cols) + desktop (3 cols) = 7 cols -->
+            <div class="col-span-6 lg:col-span-4 overflow-hidden rounded-sm">
+              <img src="/assets/images/diverse-narrative/dn-logo.webp" alt="The Diverse Narrative logo" class="w-full h-full object-cover" />
+            </div>
+            <div class="col-span-6 lg:col-span-3 overflow-hidden rounded-sm">
+              <img src="/assets/images/diverse-narrative/dn-desktop.webp" alt="The Diverse Narrative on desktop" class="w-full h-full object-cover" />
+            </div>
+
+            <!-- Row 3 right: tablet (7 cols) -->
+            <div class="col-span-12 lg:col-span-7 overflow-hidden rounded-sm">
+              <img src="/assets/images/diverse-narrative/dn-tablet.webp" alt="The Diverse Narrative on tablet" class="w-full h-full object-cover" />
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── Reflections ── -->
+        <div class="case-section mb-8 pb-8">
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24 mb-12">
+            <div>
+              <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-zinc-500 mb-3 mt-2">[ REFLECTIONS ]</p>
+            </div>
+            <div class="flex flex-col gap-5">
+              <h2 class="text-zinc-900 text-2xl font-light leading-snug">
+                Design the information architecture around ease of navigation.
+              </h2>
+              <p class="text-zinc-700 text-sm leading-relaxed">
+                There should be multiple ways for a user to find what they're looking for and ample suggestions to aid their search. It's important to design so readers feel like they're moving forward with something new to discover and not trying to retrace their steps.
+              </p>
+              <h2 class="text-zinc-900 text-2xl font-light leading-snug">
+                Creating sizing guidelines for components is key.
+              </h2>
+              <p class="text-zinc-700 text-sm leading-relaxed">
+                For a website that showcases a lot of user-generated content, utilizing an effective layout is crucial in maintaining consistency and a clean look. Different article blocks need appropriate spacing to avoid the images clashing and the site becoming too cluttered.
+              </p>
+              <p class="text-zinc-700 text-sm leading-relaxed">
+                The next step is to collaborate with writers to generate articles. This current design infrastructure was built with scalability in mind, so it should be straightforward to add blog content. I hope to collaborate with a developer and build this out in the coming year.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- ─── PROJECT NAVIGATION ──────────────────────────────────────────────── -->
+    <div class="grid grid-cols-1 md:grid-cols-2" style="background-color: #4b7188;">
+
+      <!-- Previous Project -->
+      <a href="/costcupid" class="group relative overflow-hidden block px-16 py-12 border-b border-white/20 md:border-b-0 md:border-r">
+        <img src="/assets/images/costcupid-hero.webp" alt=""
+          class="absolute inset-0 w-full h-full object-cover object-center opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="relative z-10">
+          <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-white/60 group-hover:text-white/80 mb-4 transition-colors duration-300">[ PREVIOUS PROJECT ]</p>
+          <h2 class="text-white text-4xl font-light transition-colors duration-300">CostCupid</h2>
+        </div>
+      </a>
+
+      <!-- Next Project -->
+      <a href="/tim-cheng-music" class="group relative overflow-hidden block px-16 py-12 md:text-right">
+        <img src="/assets/images/tcps-landing-pages.webp" alt=""
+          class="absolute inset-0 w-full h-full object-cover object-top opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="relative z-10">
+          <p class="font-['IBM_Plex_Mono'] text-xs tracking-[0.15em] text-white/60 group-hover:text-white/80 mb-4 transition-colors duration-300">[ NEXT PROJECT ]</p>
+          <h2 class="text-white text-4xl font-light transition-colors duration-300">Tim Cheng Music</h2>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- ─── FOOTER ───────────────────────────────────────────────────────────── -->
+    <footer id="footer" class="relative z-10 pt-12 overflow-hidden" style="background-color: #e8e9ea;">
+      <div class="mx-auto px-16 lg:px-24 mb-4 lg:mb-0">
+        <div class="grid grid-cols-[3fr_2fr] sm:grid-cols-[3fr_1fr] gap-8 sm:gap-16 px-0 xl:px-2">
+          <div class="flex flex-col gap-3 items-start self-start">
+            <p class="text-sm text-zinc-600 leading-relaxed max-w-md">
+              The best way to reach me is through LinkedIn or ClearanceJobs. My resume also has additional contact information.
+            </p>
+            <a href="https://www.linkedin.com/in/timothycheng-/" target="_blank" rel="noopener"
+              class="text-sm font-semibold text-zinc-800 hover:text-zinc-500 transition-colors">
+              Message me on LinkedIn
+            </a>
+            <a href="/assets/Tim-Cheng-Resume.pdf" target="_blank"
+              class="text-sm font-semibold text-zinc-800 hover:text-zinc-500 transition-colors">
+              View my resume
+            </a>
+          </div>
+          <div class="flex justify-end items-end self-end">
+            <img src="/assets/images/satellite-dish-black.svg" alt="" class="footer-dish w-20 sm:w-28 h-auto opacity-70" />
+          </div>
+        </div>
+      </div>
+      <div class="px-4 pb-4 overflow-hidden">
+        <p id="footer-name" class="font-bold whitespace-nowrap leading-none" style="font-size: 100px; color: #b8c8d0;">Tim Cheng</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/diverse-narrative.js"></script>
+  </body>
+</html>
