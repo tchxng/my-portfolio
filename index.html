@@ -26,7 +26,8 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;700&display=swap" /></noscript>
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body class="bg-black text-white font-['Satoshi']">
@@ -102,7 +103,7 @@
 
       <!-- Astronaut: sits above the stats section, scrolls with it -->
       <img src="/assets/images/astronaut-eating-ice-cream.svg" alt="Astronaut eating ice cream"
-        id="hero-astronaut"
+        id="hero-astronaut" fetchpriority="high"
         class="absolute top-0 left-0 w-full z-5" style="transform: translateY(-99%)" />
 
       <!-- Stats content -->
